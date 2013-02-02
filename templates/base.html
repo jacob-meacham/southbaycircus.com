@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if title %}
+    <title>{{title}} - South Bay Circus Arts</title>
+    {% else %}
+    <title>South Bay Circus Arts</title>
+    {% endif %}
+    
+    <!-- Fonts -->
+    <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- Bootstrap -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+    
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <img class="logo" src="{{url_for('static', filename='img/logo.png')}}">
+              <div class="logo-bar"></div>
+            </img>
+          </div>
+          <div class="span4 offset1">
+            <div class="pusher hidden-phone hidden-tablet"></div>
+            <p class="social-header hidden-phone hidden-tablet">Follow us elsewhere:
+            <div class="social-icons">
+                <a href="#"><i class="icon-facebook"></i></a>
+                <a href="#"><i class="icon-twitter"></i></a>
+                <a href="#"><i class="icon-google-plus"></i></a>
+                <a href="#"><i class="icon-play"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </header>
+    <nav class="navbar navbar-static-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li {% if request.path == '/' %}class="active"{% endif %}>
+                <a {% if request.path == '/' %}class="active"{% endif %} href="{{url_for('index')}}">Home</a>
+              </li>
+              <li {% if request.path == '/about' %}class="active"{% endif %}>
+                <a {% if request.path == '/about' %}class="active"{% endif %} href="{{url_for('about')}}">About</a>
+              </li>
+              <li {% if request.path == '/classes' %}class="active"{% endif %}>
+                <a {% if request.path == '/classes' %}class="active"{% endif %} href="{{url_for('classes')}}">Classes</a>
+              </li>
+              <li {% if request.path == '/teachers' %}class="active"{% endif %}>
+                <a {% if request.path == '/teachers' %}class="active"{% endif %} href="{{url_for('teachers')}}">Teachers</a>
+              </li>
+              <li {% if request.path == '/blog' %}class="active"{% endif %}>
+                <a {% if request.path == '/blog' %}class="active"{% endif %} href="{{url_for('blog')}}">Blog</a>
+              </li>
+              <li {% if request.path == '/contact' %}class="active"{% endif %}>
+                <a {% if request.path == '/contact' %}class="active"{% endif %} href="{{url_for('contact')}}">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container">
+      <div class="separator"></div>
+      {% block content %}
+      {% endblock %}
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <p>Help make a South Bay Circus Arts center a reality!
+Our indiegogo campaign is up and running to raise money for aerial equipment, mats, and circus props. <a href="#">Check out our campaign page!</a>
+          </div>
+          <div class="span4 offset4">
+            <hr class="hidden-desktop hidden-tablet">
+            <p class="copyright">Copyright South Bay Circus Arts 2013. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  </body>
+</html>
