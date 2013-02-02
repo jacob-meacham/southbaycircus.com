@@ -8,6 +8,7 @@ def index():
 
 @app.route('/blog')
 def blog():
+	# TODO: Render blog paths, blog index
 	return render_template('404.html'), 404
 
 def page_helper(path):
