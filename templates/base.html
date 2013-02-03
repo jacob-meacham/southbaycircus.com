@@ -9,11 +9,11 @@
 
     <link type="text/plain" rel="author" href="{{url_for('static', filename='humans.txt')}}" />
 
-    {% if title %}
+    {%- if title %}
     <title>{{title}} - South Bay Circus Arts</title>
-    {% else %}
+    {%- else %}
     <title>South Bay Circus Arts</title>
-    {% endif %}
+    {%- endif %}
 
     <!-- Icons -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
@@ -64,34 +64,32 @@
             <span class="icon-bar"></span>
           </a>
           <div class="nav-collapse collapse">
+            {%- macro nav_item(name, url, active_path, exact=False) %}
+              {%- if exact %}
+                {%- set active = (request.path == active_path) %}
+              {%- else %}
+                {%- set active = (active_path in request.path) %}
+              {%- endif %}
+              <li{% if active %} class="active"{% endif %}>
+                <a{% if active %} class="active"{% endif %} href="{{ url_for(url) }}">{{ name }}</a>
+              </li>
+            {%- endmacro %}
             <ul class="nav">
-              <li {% if request.path == '/' %}class="active"{% endif %}>
-                <a {% if request.path == '/' %}class="active"{% endif %} href="{{url_for('index')}}">Home</a>
-              </li>
-              <li {% if request.path == '/about' %}class="active"{% endif %}>
-                <a {% if request.path == '/about' %}class="active"{% endif %} href="{{url_for('about')}}">About</a>
-              </li>
-              <li {% if request.path == '/classes' %}class="active"{% endif %}>
-                <a {% if request.path == '/classes' %}class="active"{% endif %} href="{{url_for('classes')}}">Classes</a>
-              </li>
-              <li {% if request.path == '/teachers' %}class="active"{% endif %}>
-                <a {% if request.path == '/teachers' %}class="active"{% endif %} href="{{url_for('teachers')}}">Teachers</a>
-              </li>
-              <li {% if request.path == '/blog' %}class="active"{% endif %}>
-                <a {% if request.path == '/blog' %}class="active"{% endif %} href="{{url_for('blog')}}">Blog</a>
-              </li>
-              <li {% if request.path == '/contact' %}class="active"{% endif %}>
-                <a {% if request.path == '/contact' %}class="active"{% endif %} href="{{url_for('contact')}}">Contact Us</a>
-              </li>
+              {{- nav_item('Home', 'index', '/', True) }}
+              {{- nav_item('About', 'about', '/about') }}
+              {{- nav_item('Classes', 'classes', '/classes') }}
+              {{- nav_item('Teachers', 'teachers', '/teachers') }}
+              {{- nav_item('Blog', 'blog', '/blog') }}
+              {{- nav_item('Contact Us', 'contact', '/contact') }}
             </ul>
           </div>
         </div>
       </div>
     </nav>
-    <section class="container">
+    <section class="container content">
       <div class="separator"></div>
-      {% block content %}
-      {% endblock %}
+      {%- block content %}
+      {%- endblock %}
     </section>
     <footer class="footer">
       <div class="container">
