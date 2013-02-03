@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="South Bay Circus Arts is an arts community based near San Jose, that gives the community a chance to train, perform, and watch circus arts!">
+
+    <link type="text/plain" rel="author" href="{{url_for('static', filename='humans.txt')}}" />
 
     {% if title %}
     <title>{{title}} - South Bay Circus Arts</title>
     {% else %}
     <title>South Bay Circus Arts</title>
     {% endif %}
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/apple-touch-icon-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/apple-touch-icon-72x72-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/apple-touch-icon-114x114-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/apple-touch-icon-144x144-precomposed.png') }}>
     
+    <!-- Styling -->
     <!-- Fonts -->
     <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>

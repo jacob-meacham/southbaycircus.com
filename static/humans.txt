@@ -1,0 +1,14 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+  Jacob Meacham
+  Site: jacobmeacham.com
+
+/* THANKS */
+  Jessica Goodburn (jessicagoodburn.com)
+  Scarlet Conte
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Twitter Bootstrap, Flask, Flask-Flatpages, Flup, jQuery
