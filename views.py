@@ -51,11 +51,12 @@ def post_detail(path):
 @app.errorhandler(404)
 def error_404(error):
 	reasons = [
-	"We're not ready to reveal that part of the circus yet.",
-	"You've found a missing area of the big top!",
-	"Best keep out of the way around here!",
-	"You should wander back into charted territories.",
-	"Yuk! Jacob the Clown says that this here part of the circus just isn't ready yet!"
+	"this page is currently being sat on by an elephant!",
+	"this page is on the high-wire right now - we don't want to break its concentration!",
+	"the carnies are still putting this part of the Big Top up, check back later!",
+	"this page has a ton of lion slobber on it. We'll need to let it dry out.",
+	"this page is getting costume and makeup put on - we'll let you know when it's ready for its performance",
+	"one of our fire-eaters accidentally burned this page up!"
 	]
 	return render_template('404.html', reasons=reasons), 404
 
