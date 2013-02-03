@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="row">
+		<div class="span8 blog-preview">
+			{%- for post in posts %}
+				<h2><a href= "{{ url_for('post_detail', path=post.path) }}">{{ post.title }}</a></h2>
+				<p class="muted">Posted on {{ post.published }} by {{ post.author }}.</p>
+				{%- if post.image %}
+					<div class="row">
+						<div class="span2">
+							<div class="aside">
+								<img src="{{url_for('static', filename='img/' + post.image)}}">
+							</div>
+						</div>
+						<div class="span6 main">
+							<p>{{ post.body|truncate(1000) }} <a href= "{{ url_for('post_detail', path=post.path) }}">Continue Reading >></a></p>
+						</div>
+					</div>
+				{%- else %}
+					<p>{{ post.body|truncate(500) }} <a href= "{{ url_for('post_detail', path=post.path) }}">Continue Reading >></a></p>
+				{%- endif %}
+				<hr class="soften">
+			{% endfor %}
+		</div>
+		<div class="span4">
+			Test Test Test
+		</div>
+	</div>
+{% endblock %}

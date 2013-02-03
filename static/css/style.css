@@ -11,7 +11,7 @@ body {
   position: relative;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   color: #777;
@@ -24,9 +24,29 @@ h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
+h1 a, h2 a { 
+  color: #777;
+  text-decoration:none; 
+}
+
+h1 a:visited, h2 a:visited { 
+  color: #777;
+  text-decoration:none; 
+}
+
+h1 a:hover, h2 a:hover { 
+  color: #777;
+  text-decoration:none; 
+}
+
+h1 a:active, h2 a:active { 
+  color: #777;
+  text-decoration:none; 
+}
+
 hr.soften {
   height: 1px;
-  margin: 70px 0;
+  margin: 30px 0;
   background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
   background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
   background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
@@ -169,4 +189,22 @@ border-top: 3px solid transparent;
 .footer .copyright {
   text-align: center;
   color: #999999;
+}
+
+/* Blog */
+.blog-preview .main {
+  margin-left: 15px;
+}
+
+.blog-preview .aside {
+  border-right: 4px solid rgba(155, 155, 155, 0.2);
+  padding: 10px 15px 10px 10px;
+  display: block;
+}
+
+.blog-preview .aside img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
