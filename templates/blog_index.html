@@ -1,6 +1,5 @@
-{% extends "base.html" %}
-
-{% block content %}
+{%- extends "base.html" %}
+{%- block content %}
 	<div class="row">
 		<div class="span8 blog-preview">
 			{%- for post in posts %}
@@ -24,7 +23,7 @@
 			{% endfor %}
 		</div>
 		<div class="span4">
-			Test Test Test
+			{%- include "_recent_posts.html" %}
 		</div>
 	</div>
-{% endblock %}
+{%- endblock %}

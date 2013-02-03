@@ -208,3 +208,12 @@ border-top: 3px solid transparent;
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+.recent-posts {
+  margin-bottom: 30px;
+}
+
+.recent-posts h5 {
+  margin-left: 30px;
+  margin-bottom: 12px;
+}
