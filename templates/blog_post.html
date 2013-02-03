@@ -1,0 +1,13 @@
+{%- extends "base.html" %}
+{%- block content %}
+	<div class="row">
+		<div class="span8">
+			<h1>{{ post.title }}</h1>
+			<p class="muted">Posted on {{ post.published }} by {{ post.author }}.</p>
+			{{ post }}
+		</div>
+		<div class="span4">
+			{%- include "_recent_posts.html" %}
+		</div>
+	</div>
+{%- endblock %}

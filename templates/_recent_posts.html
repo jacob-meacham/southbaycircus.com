@@ -1,0 +1,8 @@
+<div class="well">
+	<div class="recent-posts">
+		<h3>Recent Posts</h3>
+		{% for post in recent_posts %}
+			<h5><a href= "{{ url_for('post_detail', path=post.path) }}">{{ post.title }}</a></h5>
+		{% endfor %}
+	</div>
+</div>

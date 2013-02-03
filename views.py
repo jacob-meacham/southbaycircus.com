@@ -1,3 +1,4 @@
+from datetime import date, datetime
 from app import app, pages
 from flask import render_template, flash, redirect, session, url_for, request
 
@@ -5,11 +6,6 @@ from flask import render_template, flash, redirect, session, url_for, request
 def index():
 	page = pages.get('index')
 	return render_template('page.html', page=page)
-
-@app.route('/blog')
-def blog():
-	# TODO: Render blog paths, blog index
-	return render_template('404.html'), 404
 
 def page_helper(path):
 	page = pages.get_or_404(path)
@@ -36,9 +32,21 @@ def contact():
 def about():
 	return page_helper('about')
 
+@app.route('/blog/')
+def blog():
+	posts = [p for p in pages if 'blog' in p.path]
+	posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('published',
+        date.today()))
+	return render_template('blog_index.html', title='Blog', posts=posts)
+
 @app.route('/<path:path>/')
-def page(path):
-	return page_helper(path)
+def post_detail(path):
+	post = pages.get_or_404(path)
+	recent_posts = [p for p in pages if 'blog' in p.path]
+	recent_posts = sorted(recent_posts, reverse=True, key=lambda p: p.meta.get('published',
+        date.today()))
+	recent_posts = recent_posts[:5]
+	return render_template('blog_post.html', title=post['title'], post=post, recent_posts=recent_posts)
 
 @app.errorhandler(404)
 def error_404(error):
