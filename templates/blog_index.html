@@ -23,7 +23,9 @@
 			{% endfor %}
 		</div>
 		<div class="span4">
-			{%- include "_recent_posts.html" %}
+			{%- with recent_posts=posts[:5] %}
+				{%- include "_recent_posts.html" %}
+			{%- endwith %}
 		</div>
 	</div>
 {%- endblock %}

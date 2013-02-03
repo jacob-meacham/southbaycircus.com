@@ -41,7 +41,12 @@ def blog():
 
 @app.route('/<path:path>/')
 def post_detail(path):
-	return page_helper(path)
+	post = pages.get_or_404(path)
+	recent_posts = [p for p in pages if 'blog' in p.path]
+	recent_posts = sorted(recent_posts, reverse=True, key=lambda p: p.meta.get('published',
+        date.today()))
+	recent_posts = recent_posts[:5]
+	return render_template('blog_post.html', title=post['title'], post=post, recent_posts=recent_posts)
 
 @app.errorhandler(404)
 def error_404(error):
