@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Oops!</h1>
-<p>We're not ready to reveal this part of the circus yet.
+<div class="row">
+	<div class="span6">
+		<h1>Uh oh!</h1>
+		<div class="separator"></div>
+		<h4>we couldn't show you this page because {{reasons|random}}</h4>
+	</div>
+	<div class="span6">
+		<!-- TODO: Add pictures -->
+	</div>
+</div>
 {% endblock %}
