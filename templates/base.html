@@ -34,6 +34,7 @@
     <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
   </head>
   <body>
+    <div id="wrap"> <!-- Wrap element for sticky footer. No indent. -->
     <header class="header">
       <div class="container">
         <div class="row">
@@ -91,6 +92,8 @@
       {%- block content %}
       {%- endblock %}
     </section>
+    <div id="push"></div>
+    </div> <!-- End stick footer -->
     <footer class="footer">
       <div class="container">
         <div class="row">
