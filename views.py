@@ -2,15 +2,21 @@ from datetime import date, datetime
 from app import app, pages
 from flask import render_template, flash, redirect, session, url_for, request
 
-@app.route('/')
-def index():
-	page = pages.get('index')
-	return render_template('page.html', page=page)
-
 def page_helper(path):
 	page = pages.get_or_404(path)
 	template = page.meta.get('template', 'page.html')
 	return render_template(template, page=page)
+
+def interest_images():
+	return [
+		'img/bg/acro1.png',
+		'img/bg/acro2.png'
+	]
+
+@app.route('/')
+def index():
+	page = pages.get('index')
+	return render_template('index.html', page=page)
 
 @app.route('/about')
 def about():
@@ -58,7 +64,8 @@ def error_404(error):
 	"this page is getting costume and makeup put on - we'll let you know when it's ready for its performance",
 	"one of our fire-eaters accidentally burned this page up!"
 	]
-	return render_template('404.html', reasons=reasons), 404
+
+	return render_template('404.html', reasons=reasons, interest_images=interest_images()), 404
 
 @app.errorhandler(500)
 def error_500(error):
