@@ -1,6 +1,13 @@
+from __future__ import with_statement
+
+import os.path
 from datetime import date, datetime
+
 from app import app, pages
+from forms import EditPageForm
+from app.auth import LoginForm
 from flask import render_template, flash, redirect, session, url_for, request
+from flask.ext.login import login_user, login_required
 
 def page_helper(path):
 	page = pages.get_or_404(path)
@@ -45,6 +52,42 @@ def blog():
         date.today()))
 	return render_template('blog_index.html', title='Blog', posts=posts)
 
+@app.route('/admin/login', methods=["GET", "POST"])
+def login():
+	form = LoginForm()
+	if form.validate_on_submit():
+		login_user(form.user, remember = True)
+		return redirect(request.args.get('next') or url_for('index'))
+	return render_template('login.html', form=form)
+
+@app.route('/admin')
+@login_required
+def admin():
+	return render_template('page_list.html', pages=pages)
+
+@app.route('/admin/edit/<path:path>/', methods=["GET", "POST"])
+@login_required
+def edit_page(path):
+	page = pages.get_or_404(path)
+	form = EditPageForm()
+	if form.validate_on_submit():
+		# Save over the page, and force a reload.
+		page_path = os.path.join(app.root_path, app.config['FLATPAGES_ROOT'], path) + app.config['FLATPAGES_EXTENSION']
+
+		with open(page_path, 'w') as page_file:
+			page_file.write(form.page.data)
+		return redirect(url_for(path))
+	else:
+		# Construct the full page, including meta:
+		full_page = ''
+		for k,v in page.meta.iteritems():
+			full_page += k + ': ' + v + '\n'
+		full_page += '\n'
+		full_page += page.body
+		form.page.data = full_page
+	return render_template('edit_page.html', form=form, page=page)
+
+# Fallback on a simple loading of the flatpage.
 @app.route('/<path:path>/')
 def post_detail(path):
 	post = pages.get_or_404(path)
@@ -69,4 +112,4 @@ def error_404(error):
 
 @app.errorhandler(500)
 def error_500(error):
-	return render_template('500.html'), 500
+	return render_template('500.html', interest_images=interest_images()), 500
