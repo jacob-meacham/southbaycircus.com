@@ -35,8 +35,7 @@ class LoginForm(Form):
         self.user = None
 
     def validate(self):
-        rv = Form.validate(self)
-        if not rv:
+        if not Form.validate(self):
             return False
 
         filtered_list = [user for user in user_list if user.name == self.username.data]
