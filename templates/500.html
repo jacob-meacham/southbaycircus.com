@@ -1,7 +1,13 @@
-{% extends "base.html" %}
-
-{% block content %}
-<h1>Oopsie!</h1>
-<p>You are fucked. Have a nice day!</P>
-<p><a href="{{url_for('index')}}">Back</a></p>
-{% endblock %}
+{%- extends "base.html" %}
+{%- block content %}
+<div class="row">
+	<div class="span6">
+		<h1>500 Error</h1>
+		<div class="separator"></div>
+		<h4>Sorry, something really bad just happened. Please try again later.</h4>
+	</div>
+	<div class="span4 offset2">
+		<img class = "interest-image" src="{{ url_for('static', filename=interest_images|random) }}">
+	</div>
+</div>
+{%- endblock %}
