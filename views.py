@@ -1,6 +1,8 @@
 from datetime import date, datetime
 from app import app, pages
 from flask import render_template, flash, redirect, session, url_for, request
+from flask.ext.login import login_user, login_required
+from app.auth import LoginForm
 
 def page_helper(path):
 	page = pages.get_or_404(path)
@@ -54,6 +56,29 @@ def post_detail(path):
 	recent_posts = recent_posts[:5]
 	return render_template('blog_post.html', title=post['title'], post=post, recent_posts=recent_posts)
 
+@app.route('/admin/login', methods=["GET", "POST"])
+def login():
+	form = LoginForm()
+	if form.validate_on_submit():
+		login_user(form.user, remember = True)
+		return redirect(request.args.get('next') or url_for('index'))
+	return render_template('login.html', form=form)
+
+@app.route('/admin')
+@login_required
+def admin():
+	return render_template('page_list.html', pages=pages)
+
+@app.route('/admin/<path:path>/', methods=["GET", "POST"])
+@login_required
+def edit_page(path):
+	page = pages.get_or_404(path)
+	form = PostForm(page.body)
+	if form.validate_on_submit():
+		# TODO: Change page
+		return redirect(url_for(path))
+	return render_template('edit_page.html', page=page)
+
 @app.errorhandler(404)
 def error_404(error):
 	reasons = [
@@ -69,4 +94,4 @@ def error_404(error):
 
 @app.errorhandler(500)
 def error_500(error):
-	return render_template('500.html'), 500
+	return render_template('500.html', interest_images=interest_images()), 500
