@@ -1,8 +1,13 @@
+from __future__ import with_statement
+
+import os.path
 from datetime import date, datetime
+
 from app import app, pages
+from forms import EditPageForm
+from app.auth import LoginForm
 from flask import render_template, flash, redirect, session, url_for, request
 from flask.ext.login import login_user, login_required
-from app.auth import LoginForm
 
 def page_helper(path):
 	page = pages.get_or_404(path)
@@ -47,15 +52,6 @@ def blog():
         date.today()))
 	return render_template('blog_index.html', title='Blog', posts=posts)
 
-@app.route('/<path:path>/')
-def post_detail(path):
-	post = pages.get_or_404(path)
-	recent_posts = [p for p in pages if 'blog' in p.path]
-	recent_posts = sorted(recent_posts, reverse=True, key=lambda p: p.meta.get('published',
-        date.today()))
-	recent_posts = recent_posts[:5]
-	return render_template('blog_post.html', title=post['title'], post=post, recent_posts=recent_posts)
-
 @app.route('/admin/login', methods=["GET", "POST"])
 def login():
 	form = LoginForm()
@@ -69,15 +65,37 @@ def login():
 def admin():
 	return render_template('page_list.html', pages=pages)
 
-@app.route('/admin/<path:path>/', methods=["GET", "POST"])
+@app.route('/admin/edit/<path:path>/', methods=["GET", "POST"])
 @login_required
 def edit_page(path):
 	page = pages.get_or_404(path)
-	form = PostForm(page.body)
+	form = EditPageForm()
 	if form.validate_on_submit():
-		# TODO: Change page
+		# Save over the page, and force a reload.
+		page_path = os.path.join(app.root_path, app.config['FLATPAGES_ROOT'], path) + app.config['FLATPAGES_EXTENSION']
+
+		with open(page_path, 'w') as page_file:
+			page_file.write(form.page.data)
 		return redirect(url_for(path))
-	return render_template('edit_page.html', page=page)
+	else:
+		# Construct the full page, including meta:
+		full_page = ''
+		for k,v in page.meta.iteritems():
+			full_page += k + ': ' + v + '\n'
+		full_page += '\n'
+		full_page += page.body
+		form.page.data = full_page
+	return render_template('edit_page.html', form=form, page=page)
+
+# Fallback on a simple loading of the flatpage.
+@app.route('/<path:path>/')
+def post_detail(path):
+	post = pages.get_or_404(path)
+	recent_posts = [p for p in pages if 'blog' in p.path]
+	recent_posts = sorted(recent_posts, reverse=True, key=lambda p: p.meta.get('published',
+        date.today()))
+	recent_posts = recent_posts[:5]
+	return render_template('blog_post.html', title=post['title'], post=post, recent_posts=recent_posts)
 
 @app.errorhandler(404)
 def error_404(error):
