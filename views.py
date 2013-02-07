@@ -39,7 +39,11 @@ def teachers():
 
 @app.route('/contact')
 def contact():
-	return page_helper('contact')
+	return render_template('contact.html', title='Contact Us')
+
+@app.route('/booking')
+def booking():
+	return page_helper('booking')
 
 @app.route('/about')
 def about():
