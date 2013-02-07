@@ -1,13 +1,51 @@
-title: South Bay Circus Arts
+title: Teachers
 
-#Main Page
+<div class="row bio">
+<img src="/static/img/jessica_teacher.jpg"/>
+<h3>Jessica Goodburn</h3>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper dolor a ante lacinia quis sodales ipsum viverra. Etiam vel posuere urna. Aenean dui enim, aliquam ac ullamcorper ac, fermentum sed dui. Etiam velit turpis, consectetur id laoreet ac, sodales id nisl. Fusce fermentum, eros et faucibus tempor, dolor erat commodo dolor, tincidunt malesuada ligula velit nec turpis. Nulla ac iaculis urna. Maecenas pretium pulvinar magna, vitae blandit quam condimentum nec. Maecenas elementum ultrices dui sed pharetra. Nunc consequat aliquam libero, sed malesuada risus egestas a. Mauris ultricies massa in est suscipit posuere. Fusce adipiscing consequat interdum. Aliquam aliquet condimentum sapien. Nam nibh justo, ullamcorper in feugiat quis, dignissim non arcu. Duis in neque urna. Donec tellus nisi, imperdiet sed adipiscing quis, rutrum in risus. Aliquam erat volutpat.
+Jessica started her circus training doing floor routines in a USA leotard in her backyard. Her love of being upside down and movement led her to BA in Modern Dance at the University of Oregon and eventually to practicing Partner Acrobatics with her boyfriend, Jacob. Jessica believes that the flier plays an active role in the execution and safety of acrobatic movements, and she draws heavily on her background in dance and contact improvisation to create new movements and help students refine old ones. In addition to Partner Acrobatics, Jessica teaches Flexibility and Dance for Circus Artists. She is also a Certified Pilates Instructor. 
+</div>
+<hr class = "soften">
+<div class="row bio">
+<img src="/static/img/jacob_teacher.jpg"/>
+<h3>Jacob Meacham</h3>
 
-Nulla nec leo mauris, hendrerit elementum nisl. Etiam placerat neque in nisi vestibulum vitae adipiscing eros feugiat. Etiam dui mi, tincidunt nec ornare sed, bibendum et lorem. Cras quis urna orci, rhoncus iaculis diam. Sed non neque non lacus convallis consequat. Donec suscipit molestie pharetra. Pellentesque blandit, risus sed euismod accumsan, ligula lectus ultricies ligula, sit amet dapibus nibh ligula non augue. In lacus felis, rhoncus vel egestas sed, sagittis quis dui. Duis convallis, metus a ornare laoreet, metus quam convallis neque, eu euismod metus est condimentum augue. Vestibulum aliquam diam nec odio hendrerit aliquet. Nullam consequat commodo quam quis auctor.
-
-Aliquam justo libero, egestas non venenatis id, aliquet bibendum arcu. In quis tellus quam. Suspendisse a turpis lacus, et consequat diam. Suspendisse arcu odio, cursus nec suscipit sit amet, porttitor quis dolor. Nulla id metus ipsum. Vestibulum quis ipsum et massa interdum auctor id sed justo. Nulla elementum rutrum magna, nec accumsan risus eleifend quis. Fusce condimentum nunc et arcu placerat non ornare lorem vulputate. Maecenas interdum eros a tortor varius dictum. Pellentesque euismod suscipit porttitor.
-
-Etiam vestibulum tortor sed nunc pretium tempor. Praesent facilisis velit non dolor faucibus et tincidunt augue condimentum. Morbi mollis lobortis orci, sit amet tristique libero viverra at. Aliquam id quam lacus, ac ultrices eros. Proin leo ante, ullamcorper vel congue a, consequat at velit. Etiam suscipit vehicula orci ut dapibus. Proin varius ligula a augue euismod pellentesque facilisis velit aliquam. Duis tellus magna, dignissim gravida consequat vitae, tempor ut arcu. Nam nec faucibus nunc. Sed ac elit urna, sit amet sollicitudin nunc. Aliquam enim turpis, pulvinar sit amet venenatis nec, cursus at nisl.
-
-In cursus nisi ut nunc sagittis at placerat mauris eleifend. Integer quam dolor, porttitor ac fermentum nec, faucibus sed nibh. Nam euismod libero at neque dictum eu iaculis felis rutrum. Morbi ullamcorper tortor fermentum magna ultrices non viverra neque aliquet. Donec sit amet tortor erat, dictum iaculis lacus. Sed eu pulvinar justo. Cras ultricies, est eget accumsan ultricies, eros urna sollicitudin diam, eu porta elit neque sed lectus. Aliquam tincidunt, neque vel ornare fermentum, massa augue convallis odio, id ultricies dolor sem vel nisi. Morbi eu mauris nibh, eu lobortis eros. Proin ut enim ut magna dictum condimentum suscipit nec lacus.
+Blah blah blah blah, Jacob is the boring-est! Bad idea to write a bio at 1:30...
+</div>
+<hr class = "soften">
+<div class="row bio">
+<img src="/static/img/blank_teacher.jpg"/>
+<h3>Corbin Dunn</h3>
+Bio coming soon. 
+</div>
+<hr class = "soften">
+<div class="row bio">
+<img src="/static/img/blank_teacher.jpg"/>
+<h3>Miriam Robinson Gould</h3>
+Bio coming soon. 
+</div>
+<hr class = "soften">
+<div class="row bio">
+<img src="/static/img/blank_teacher.jpg"/>
+<h3>Julie Harness</h3>
+Bio coming soon. 
+</div>
+<hr class = "soften">
+<div class="row bio">
+<img src="/static/img/blank_teacher.jpg"/>
+<h3>Cosmo Hom</h3>
+Bio coming soon. 
+</div> 
+<hr class = "soften">
+<div class="row bio">
+<img src="/static/img/blank_teacher.jpg"/>
+<h3>Soo Hom</h3>
+Bio coming soon. 
+</div> 
+<hr class = "soften">
+<div class="row bio">
+<img src="/static/img/blank_teacher.jpg"/>
+<h3>Christina Kaminski</h3>
+Bio coming soon. 
+</div>
