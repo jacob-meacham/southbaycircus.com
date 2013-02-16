@@ -167,11 +167,6 @@ border-radius:10px;
 box-shadow:inset 0px 1px 1px #111;
 }
 
-.social-icons i:hover{
-background:#444;
-box-shadow:inset 0px 1px 1px #222;
-}
-
 .social-icons a, .social-icons a:visited {
   color:#fff;
 }
