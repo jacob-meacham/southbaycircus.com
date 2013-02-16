@@ -9,11 +9,11 @@ title: Classes
 * 8:15-9:15 Hooping with Julie
 
 ####Thursday at Starting Arts
-* 7:30-8:30 Props for Glow and Fire Dance
+* 7:30-8:30 Club and Poi Spinning with Christina
 * 8:30-9:30 Cyr Wheel with Corbin
 
 ####Sunday at Vega's Integrated Tumbling
-* 12:45-2 Beginning Aerial Arts with Jacob and Jessica
-* 12:45-2 Beginning Partner Acrobatics with Miriam
+* 12:45-2 Beginning Aerial Arts with Miriam
+* 12:45-2 Beginning Partner Acrobatics with Jessica and Jacob
 
 Don't see the class you're looking for? [Send us a message](/contact/) and let us know! 
