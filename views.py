@@ -85,7 +85,7 @@ def edit_page(path):
 		# Construct the full page, including meta:
 		full_page = ''
 		for k,v in page.meta.iteritems():
-			full_page += k + ': ' + v + '\n'
+			full_page += str(k) + ': ' + str(v) + '\n'
 		full_page += '\n'
 		full_page += page.body
 		form.page.data = full_page
