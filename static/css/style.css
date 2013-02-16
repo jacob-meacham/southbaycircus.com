@@ -301,6 +301,22 @@ border-top: 3px solid transparent;
   margin-right: 10px;
 }
 
+/* About */
+.faq .accordion-group {
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.faq .accordion-heading a, .faq .accordion-heading a:visited {
+  font-size: 18px;
+  color: #777;
+}
+
+.faq .accordion-heading a:hover, .faq .accordion-heading a:active {
+  color: #777;
+  text-decoration:none; 
+}
+
 /* Blog */
 .blog-preview .main {
   margin-left: 15px;

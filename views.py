@@ -55,7 +55,7 @@ def booking():
 
 @app.route('/about/')
 def about():
-	return page_helper('about')
+	return render_template('about.html', title='About')
 
 @app.route('/blog/')
 def blog():
