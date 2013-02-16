@@ -1,13 +1,25 @@
 from __future__ import with_statement
 
 import os.path
+import re
+
 from datetime import date, datetime
+from unicodedata import normalize
 
 from app import app, pages
-from forms import EditPageForm
+from forms import EditPageForm, AddPostForm
 from app.auth import LoginForm
 from flask import render_template, flash, redirect, session, url_for, request
 from flask.ext.login import login_user, login_required
+
+def slugify(text, delim=u'-'):
+    _punct_re = re.compile(r'[\t !"#$%&\'()*\-/<=>?@\[\\\]^_`{|},.]+')
+    result = []
+    for word in _punct_re.split(text.lower()):
+        word = normalize('NFKD', word).encode('ascii', 'ignore')
+        if word:
+            result.append(word)
+    return unicode(delim.join(result))
 
 def page_helper(path):
 	page = pages.get_or_404(path)
@@ -25,27 +37,23 @@ def index():
 	page = pages.get('index')
 	return render_template('index.html', page=page)
 
-@app.route('/about')
-def about():
-	return page_helper('about')
-
-@app.route('/classes')
+@app.route('/classes/')
 def classes():
 	return page_helper('classes')
 
-@app.route('/teachers')
+@app.route('/teachers/')
 def teachers():
 	return page_helper('teachers')
 
-@app.route('/contact')
+@app.route('/contact/')
 def contact():
 	return render_template('contact.html', title='Contact Us')
 
-@app.route('/booking')
+@app.route('/booking/')
 def booking():
 	return page_helper('booking')
 
-@app.route('/about')
+@app.route('/about/')
 def about():
 	return page_helper('about')
 
@@ -56,7 +64,7 @@ def blog():
         date.today()))
 	return render_template('blog_index.html', title='Blog', posts=posts)
 
-@app.route('/admin/login', methods=["GET", "POST"])
+@app.route('/admin/login/', methods=["GET", "POST"])
 def login():
 	form = LoginForm()
 	if form.validate_on_submit():
@@ -64,10 +72,29 @@ def login():
 		return redirect(request.args.get('next') or url_for('index'))
 	return render_template('login.html', form=form)
 
-@app.route('/admin')
+@app.route('/admin/')
 @login_required
 def admin():
 	return render_template('admin_page_list.html', pages=pages)
+
+@app.route('/admin/blog/new/', methods=["GET", "POST"])
+@login_required
+def add_post():
+	form = AddPostForm()
+	if form.validate_on_submit():
+		slug = slugify(form.title.data)
+		page_path = os.path.join(app.root_path, app.config['FLATPAGES_ROOT'], 'blog', slug) + app.config['FLATPAGES_EXTENSION']
+
+		# Add some metadata for the user:
+		blog_post = 'title: ' + form.title.data + '\n' + \
+					'published: ' + datetime.today().strftime('%Y-%m-%d') + '\n' + \
+					form.page.data
+
+		with open(page_path, 'w') as page_file:
+			page_file.write(blog_post)
+		return redirect(url_for('post_detail', path='blog/' + slug))
+
+	return render_template('admin_add_page.html', form=form)
 
 @app.route('/admin/edit/<path:path>/', methods=["GET", "POST"])
 @login_required
@@ -80,7 +107,7 @@ def edit_page(path):
 
 		with open(page_path, 'w') as page_file:
 			page_file.write(form.page.data)
-		return redirect(url_for(path))
+		return redirect(url_for('post_detail', path=path))
 	else:
 		# Construct the full page, including meta:
 		full_page = ''
