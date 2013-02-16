@@ -67,7 +67,7 @@ def login():
 @app.route('/admin')
 @login_required
 def admin():
-	return render_template('page_list.html', pages=pages)
+	return render_template('admin_page_list.html', pages=pages)
 
 @app.route('/admin/edit/<path:path>/', methods=["GET", "POST"])
 @login_required
@@ -89,7 +89,7 @@ def edit_page(path):
 		full_page += '\n'
 		full_page += page.body
 		form.page.data = full_page
-	return render_template('edit_page.html', form=form, page=page)
+	return render_template('admin_edit_page.html', form=form, page=page)
 
 # Fallback on a simple loading of the flatpage.
 @app.route('/<path:path>/')
