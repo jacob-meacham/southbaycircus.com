@@ -17,3 +17,5 @@ title: Classes
 * 12:45-2 Beginning Partner Acrobatics with Jessica and Jacob
 
 Don't see the class you're looking for? [Send us a message](/contact/) and let us know! 
+
+<hr class="soften">
