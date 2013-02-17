@@ -1,0 +1,1 @@
+Rename config_template.py to config.py and fill in your secret key, admin accounts (for editing content), and email server settings.
