@@ -7,7 +7,7 @@ from datetime import date, datetime
 from unicodedata import normalize
 
 from app import app, pages
-from forms import EditPageForm, AddPostForm
+from forms import EditPageForm, AddPostForm, ContactForm
 from app.auth import LoginForm
 from flask import render_template, flash, redirect, session, url_for, request
 from flask.ext.login import login_user, login_required
@@ -45,9 +45,14 @@ def classes():
 def teachers():
 	return page_helper('teachers')
 
-@app.route('/contact/')
+@app.route('/contact/', methods=["GET", "POST"])
 def contact():
-	return render_template('contact.html', title='Contact Us')
+	form = ContactForm()
+	if form.validate_on_submit():
+		form.send()
+		flash('Thanks for contacting us! We promise to get back to you soon.', 'contact')
+		return redirect(url_for('contact'))
+	return render_template('contact.html', title='Contact Us', form=form)
 
 @app.route('/booking/')
 def booking():
