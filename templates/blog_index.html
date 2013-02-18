@@ -13,11 +13,11 @@
 							</div>
 						</div>
 						<div class="span6 main">
-							<p>{{ post.body|truncate(1000) }} <a href= "{{ url_for('post_detail', path=post.path) }}">Continue Reading >></a></p>
+							<p>{{ post.html|truncate(400)|striptags }} <a href= "{{ url_for('post_detail', path=post.path) }}">Continue Reading >></a></p>
 						</div>
 					</div>
 				{%- else %}
-					<p>{{ post.body|truncate(500) }} <a href= "{{ url_for('post_detail', path=post.path) }}">Continue Reading >></a></p>
+					<p>{{ post.html|truncate(400)|striptags }} <a href= "{{ url_for('post_detail', path=post.path) }}">Continue Reading >></a></p>
 				{%- endif %}
 				<hr class="soften">
 			{% endfor %}
