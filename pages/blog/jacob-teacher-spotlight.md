@@ -3,7 +3,9 @@ image: teachers/jacob.jpg
 author: Jessica
 published: 2013-02-17
 
-Meet Jacob Meacham, one of our partner acrobatics teachers and a co-founder of South Bay Circus Arts. In addition to acrobatics, Jacob is working on his juggling skills. He teaches Partner Acrobatics, Levels 1 and 2 for SBCA. I sat down with him to chat about the circus and teaching acrobatics.
+<img src="/static/img/blog/acro1.jpg" class="blog-image" style="float: left; max-width: 300px">
+
+**Meet Jacob Meacham**, one of our partner acrobatics teachers and a co-founder of South Bay Circus Arts. In addition to acrobatics, Jacob is working on his juggling skills. He teaches Partner Acrobatics, Levels 1 and 2 for SBCA. I sat down with him to chat about the circus and teaching acrobatics.
 
 <hr class="soften">
 
@@ -22,6 +24,8 @@ Along with my acrobatic partner, Jessie, I think that our class offers a lot of 
 
 <br>
 
+<img src="/static/img/blog/jacob_ball.jpg" class="blog-image" style="float: right; max-width: 300px">
+
 ####What are you currently working on in your own practice?
 We’re starting to play with introducing musicality and theatricality into our routines, so moving away from a gymnastics style and toward something more like [Pilobolus](http://www.pilobolus.com). 
 
@@ -34,3 +38,7 @@ When I told circus friends from Oregon I was moving to the South Bay, they said 
 
 ####What’s one circus skill that you’d you’d love to try, but haven’t yet?
 I’d love to do the chinese pole. The strength that takes is just awesome, and it's such a cool way to get up off the ground without using aerial apparatus.
+
+<hr class="soften">
+
+<img src="/static/img/teachers/jacob.jpg" class="blog-image center">

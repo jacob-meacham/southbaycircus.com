@@ -124,6 +124,11 @@ hr.soften {
   margin-bottom: 10px;
 }
 
+.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+
 /* Header */
 .header .pusher {
   height: 39px;
@@ -333,6 +338,12 @@ border-top: 3px solid transparent;
   height: auto;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.blog-image {
+  padding: 5px;
+  border: 1px solid rgba(155, 155, 155, 0.5);
+  margin: 10px;
 }
 
 .recent-posts {
