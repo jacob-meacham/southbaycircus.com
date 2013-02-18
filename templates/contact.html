@@ -1,0 +1,86 @@
+{%- extends "base.html" %}
+{%- block content %}
+<div class="row">
+	<div class="span4">
+		<img class="block-image" src="{{ url_for('static', filename='img/test_image.jpg') }}"/>
+	</div>
+	<div class="span8">
+		<h2>Want to join the circus?</h2>
+		<p>Come on in to one of our classes, hit us up on Facebook, or drop us a line!</p>
+		<h2>Interested in performing?</h2>
+		<p>We're always looking for awesome, talented individuals to perform with - let us know your skill, and your style!</p>
+		<h2>Want to book us?</h2>
+		<p>We <strong>love</strong> performing, almost as much as we love sharing the Circus arts. Send us a message to see what we can do for you!</p>
+	</div>
+</div>
+<hr class = "soften">
+<div class="row">
+	<div class="span5">
+		<div class="separator"></div>
+		{%- with messages = get_flashed_messages(category_filter=['contact']) %}
+		{%- if messages %}
+		{%- for message in messages %}
+		<div class="alert alert-info fade in">
+		    <button type="button" class="close" data-dismiss="alert">&times;</button>
+		    {{ message }}
+		</div>
+		{%- endfor %}
+		{%- endif %}
+		{%- endwith %}
+		<form class="form well" action="" method="post" name="contact">
+			{{form.hidden_tag()}}
+			<div class="row">
+				<div class="span2">
+					<div class="control-group{% if form.errors.email %} error{% endif %}">
+						<div class="controls">
+							<label>Email Address</label>
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-envelope"></i></span>{{ form.email(class="span2", id="inputIcon", placeholder="Your email address") }}
+							</div>	
+							{% for error in form.errors.email %}
+								<span class="help-inline">{{error}}</span><br>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="control-group{% if form.errors.subject %} error{% endif %}">
+						<div class="controls">
+							<label>Subject</label>
+							{{ form.subject(class="span3", placeholder="Subject") }}
+							{% for error in form.errors.subject %}
+								<span class="help-inline">{{error}}</span><br>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<div class="span3">
+					<div class="control-group{% if form.errors.message %} error{% endif %}">
+						<div class="controls">
+							<label>Message</label>
+							{{ form.message(class="input-xlarge span4", rows="10", id="message") }}
+							{% for error in form.errors.message %}
+								<span class="help-inline">{{error}}</span><br>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Send</button>
+		</form>
+	</div>
+	<div class="span6 offset1">
+		<h2>How to find us:</h2>
+		<h5>At <a href="http://www.startingarts.com/">Starting Arts</a></h5>
+		<iframe width="425" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Starting+Arts,+3340+Montgomery+Dr,+Santa+Clara,+CA&amp;aq=0&amp;oq=Starting&amp;sll=37.269174,-119.306607&amp;sspn=11.044354,26.784668&amp;t=h&amp;ie=UTF8&amp;hq=Starting+Arts,&amp;hnear=3340+Montgomery+Dr,+Santa+Clara,+California+95054&amp;ll=37.38045,-121.973072&amp;spn=0.006295,0.006295&amp;output=embed"></iframe>
+
+		<div class="separator"></div>
+
+		<h5>At <a href="http://vegasintegrated.com/">Vega's Integrated Tumbling</a></h5>
+		<iframe width="425" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1111+Felipe+Ave+%23101+San+Jose+CA+,+CA+95122&amp;aq=&amp;sll=37.378751,-122.001114&amp;sspn=0.08621,0.209255&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=1111+Felipe+Ave+%23101,+San+Jose,+California+95122&amp;z=14&amp;ll=37.336002,-121.850274&amp;output=embed"></iframe>
+	</div>
+</div>
+<div class="contact-addresses">
+	<strong>Starting Arts</strong> 3340 Montgomery Dr.
+Santa Clara, CA 95054 | <strong>Vega's Integrated Tumbling</strong> 1111 Felipe Ave #101
+San Jose CA , CA 95122
+</div>
+{% endblock %}

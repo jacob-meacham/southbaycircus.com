@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="accordion faq" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Who are you?
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        South Bay Circus Arts (SBCA) is a gathering of circus artists from many disciplines who have come together to bring circus arts classes, training opportunities, and performances to the South Bay. We also sponsor a <a href="http://www.meetup.com/South-Bay-Circus-Arts/">Meetup</a> to facilitate informal circus arts jam sessions (note: unless otherwise specified, SBCA does not host and is not responsible for events organized through the Meetup).
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseJoin">
+        How can I join?
+      </a>
+    </div>
+    <div id="collapseJoin" class="accordion-body collapse">
+      <div class="accordion-inner">
+        To find a class, see the <a href="{{ url_for('classes') }}">Classes</a> schedule. If you want to learn a skill but do not currently see a class offered in it,  <a href="{{ url_for('contact') }}">contact us</a>. We are happy to expand our class offerings if we know there is demand. You can also <a href="{{ url_for('contact') }}">contact us</a> to arrange private lessons.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseChildren">
+        Do you teach children?
+      </a>
+    </div>
+    <div id="collapseChildren" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Currently, we don't teach children during our regular classes. However, we'll be teaming up with <a href="http://www.startingarts.com/">Starting Arts</a> this summer to offer summer programs in circus arts. If you really want us to offer kids classes, <a href="{{ url_for('contact') }}">tell us</a>, and if there is enough demand, we'll look into it!
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseExperience">
+        Do I need any circus experience?
+      </a>
+    </div>
+    <div id="collapseExperience" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Not at all! We offer a multitude of beginner classes in all circus arts. If you're not sure whether a skill is right for you, the broader community down here can give you a few pointers before you start your first class. Find them on <a href="http://www.meetup.com/South-Bay-Circus-Arts/">Meetup</a>.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseNeeds">
+        what do I need to bring to class?
+      </a>
+    </div>
+    <div id="collapseNeeds" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Curiosity, respect for your instructor and fellow students, and a willingness to try!
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseBooking">
+        How do I book you for a performance?
+      </a>
+    </div>
+    <div id="collapseBooking" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Send us a message on our <a href="{{ url_for('contact') }}">contact page</a>, and we can talk about what we can do for you. Our performers are professional and have all sorts of skills, so we can find something that fits your needs and budgets. We offer shows from a single performer in front of your trade booth, to a huge circus with acrobats, jugglers, contortionists, clowns, and aerialists. We can also teach for your next corporate team-building event.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseNewTeachers">
+        You guys rock! Are you looking for teachers/performers?
+      </a>
+    </div>
+    <div id="collapseNewTeachers" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Definitely! If you've got a cool skill that you'd like to share, or are passionate about teaching, drop us a line over at our <a href="{{ url_for('contact') }}">contact page.</a>
+      </div>
+    </div>
+  </div>
+</div>
+{{ page }}
+{% endblock %}
