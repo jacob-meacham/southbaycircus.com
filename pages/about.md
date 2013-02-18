@@ -1,11 +1,14 @@
 title: About
 
 #Who Are We?
-South Bay Circus Arts Collective is dedicated to spreading the love of circus arts throughout the South Bay. We host outdoor circus jams and skill shares where people can come play, learn, and exchange circus skills. We include people of all skill levels from the newest beginners to seasoned performers. All you need is curiosity and a willingness to try.
- 
- 
-#What Do We Do?
-Stuff!
- 
+<br>
+
+####South Bay Circus Arts (SBCA) is a gathering of circus artists from many disciplines who have come together to bring circus arts classes, training opportunities, and performances to the South Bay. We also sponsor a [Meetup](http://www.meetup.com/South-Bay-Circus-Arts/) to facilitate informal circus arts jam sessions (note: unless otherwise specified, SBCA does not host and is not responsible for events organized through the Meetup).
+<br>
 #How Can You Join?
-Pick a skill, and do it!
+<br>
+####To find a class, see the [Classes](/classes/) schedule. If you want to learn a skill but do not currently see a class offered in it,  [contact us](/contact/). We are happy to expand our class offerings if we know there is demand. You can also [contact us](/contact/) to arrange private lessons.
+<br>
+#What Do You Need?
+<br>
+####Curiosity, respect for your instructor and fellow students, and a willingness to try!

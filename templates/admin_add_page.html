@@ -1,0 +1,29 @@
+{%- extends "base.html" %}
+{%- block content %}
+<div class="well">
+	<form class="form" action="" method="post" name="login">
+		{{form.hidden_tag()}}
+		<div class="control-group{% if form.errors.title %} error{% endif %}">
+			<div class="controls">
+				{{ form.title(class="span11", placeholder="Title") }}
+				{% for error in form.errors.title %}
+					<span class="help-inline">{{error}}</span><br>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="control-group{% if form.errors.page %} error{% endif %}">
+			<div class="controls">
+				{{ form.page(class="span11", rows="20") }}
+				{% for error in form.errors.page %}
+					<span class="help-inline">{{error}}</span><br>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input class="btn" type="submit" value="Save Changes">
+			</div>
+		</div>
+	</form>
+</div>
+{%- endblock %}

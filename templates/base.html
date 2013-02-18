@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% if title %}
+    <meta name="description" content="South Bay Circus Arts is an arts community based near San Jose, that gives the community a chance to train, perform, and watch circus arts!">
+
+    <link type="text/plain" rel="author" href="{{url_for('static', filename='humans.txt')}}" />
+
+    {%- if title %}
     <title>{{title}} - South Bay Circus Arts</title>
-    {% else %}
+    {%- else %}
     <title>South Bay Circus Arts</title>
-    {% endif %}
+    {%- endif %}
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/apple-touch-icon-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/apple-touch-icon-72x72-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/apple-touch-icon-114x114-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/apple-touch-icon-144x144-precomposed.png') }}">
     
+    <!-- Styling -->
     <!-- Fonts -->
     <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
@@ -20,6 +34,7 @@
     <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
   </head>
   <body>
+    <div id="wrap"> <!-- Wrap element for sticky footer. No indent. -->
     <header class="header">
       <div class="container">
         <div class="row">
@@ -32,10 +47,10 @@
             <div class="pusher hidden-phone hidden-tablet"></div>
             <p class="social-header hidden-phone hidden-tablet">Follow us elsewhere:
             <div class="social-icons">
-                <a href="#"><i class="icon-facebook"></i></a>
-                <a href="#"><i class="icon-twitter"></i></a>
-                <a href="#"><i class="icon-google-plus"></i></a>
-                <a href="#"><i class="icon-play"></i></a>
+                <a href="http://www.facebook.com/southbaycircusarts" class="tt" data-toggle="tooltip" data-placement="top" title data-original-title="Like us on Facebook!"><i class="icon-facebook"></i></a>
+                <a href="https://twitter.com/SouthBayCircus" class="tt" data-toggle="tooltip" data-placement="top" title data-original-title="Follow us on Twitter!"><i class="icon-twitter"></i></a>
+                <a href="https://plus.google.com/u/0/103316161784406348940/posts" class="tt" data-toggle="tooltip" data-placement="top" title data-original-title="Follow us on Google Plus!"><i class="icon-google-plus"></i></a>
+                <a href="http://www.youtube.com/user/SouthBayCircusArts" class="tt" data-toggle="tooltip" data-placement="top" title data-original-title="Watch us on Youtube!"><i class="icon-play"></i></a>
               </div>
             </div>
           </div>
@@ -50,41 +65,41 @@
             <span class="icon-bar"></span>
           </a>
           <div class="nav-collapse collapse">
+            {%- macro nav_item(name, url, active_path, exact=False) %}
+              {%- if exact %}
+                {%- set active = (request.path == active_path) %}
+              {%- else %}
+                {%- set active = (active_path in request.path) %}
+              {%- endif %}
+              <li{% if active %} class="active"{% endif %}>
+                <a{% if active %} class="active"{% endif %} href="{{ url_for(url) }}">{{ name }}</a>
+              </li>
+            {%- endmacro %}
             <ul class="nav">
-              <li {% if request.path == '/' %}class="active"{% endif %}>
-                <a {% if request.path == '/' %}class="active"{% endif %} href="{{url_for('index')}}">Home</a>
-              </li>
-              <li {% if request.path == '/about' %}class="active"{% endif %}>
-                <a {% if request.path == '/about' %}class="active"{% endif %} href="{{url_for('about')}}">About</a>
-              </li>
-              <li {% if request.path == '/classes' %}class="active"{% endif %}>
-                <a {% if request.path == '/classes' %}class="active"{% endif %} href="{{url_for('classes')}}">Classes</a>
-              </li>
-              <li {% if request.path == '/teachers' %}class="active"{% endif %}>
-                <a {% if request.path == '/teachers' %}class="active"{% endif %} href="{{url_for('teachers')}}">Teachers</a>
-              </li>
-              <li {% if request.path == '/blog' %}class="active"{% endif %}>
-                <a {% if request.path == '/blog' %}class="active"{% endif %} href="{{url_for('blog')}}">Blog</a>
-              </li>
-              <li {% if request.path == '/contact' %}class="active"{% endif %}>
-                <a {% if request.path == '/contact' %}class="active"{% endif %} href="{{url_for('contact')}}">Contact Us</a>
-              </li>
+              {{- nav_item('Home', 'index', '/', True) }}
+              {{- nav_item('About', 'about', '/about') }}
+              {{- nav_item('Classes', 'classes', '/classes') }}
+              {{- nav_item('Teachers', 'teachers', '/teachers') }}
+              {{- nav_item('Blog', 'blog', '/blog') }}
+              {{- nav_item('Contact Us', 'contact', '/contact') }}
             </ul>
           </div>
         </div>
       </div>
     </nav>
-    <section class="container">
+    <section class="container content">
       <div class="separator"></div>
-      {% block content %}
-      {% endblock %}
+      {%- block content %}
+      {%- endblock %}
     </section>
+    <div id="push"></div>
+    </div> <!-- End stick footer -->
     <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="span4">
             <p>Help make a South Bay Circus Arts center a reality!
-Our indiegogo campaign is up and running to raise money for aerial equipment, mats, and circus props. <a href="#">Check out our campaign page!</a>
+Our indiegogo campaign is up and running to raise money for aerial equipment, mats, and circus props. <a href="http://igg.me/at/sbca">Check out our campaign page!</a>
           </div>
           <div class="span4 offset4">
             <hr class="hidden-desktop hidden-tablet">
@@ -94,7 +109,23 @@ Our indiegogo campaign is up and running to raise money for aerial equipment, ma
       </div>
     </footer>
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- JavaScript at the bottom for fast page loading -->
+    <script src="{{url_for('static', filename='js/jquery-1.9.1.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/application.js')}}"></script>
+
+    <!-- Asynchronous Google Analytics snippet. -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38198609-1']);
+      _gaq.push(['_setDomainName', 'southbaycircus.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
 </html>
