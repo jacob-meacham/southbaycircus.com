@@ -25,7 +25,7 @@ After forty years in the entertainment industry, Cosmo has reached a high enough
 <img src="/static/img/teachers/jacob.jpg"/>
 <h3>Jacob Meacham</h3>
 
-Jacob's first began finding body awareness during rock climbing competitions. A lot later, he applied the same tenacity he used for clinging to walls to keep his partners from falling off of his hands. Jacob teaches Partner Acrobatics, dabbles in Partner Juggling, and would love to try Partner trapeze (notice a pattern?) By day, you can find Jacob programming - he loves game development and web development (like this site), and most of the rest of the time, you can Jacob either balancing someone else on his body, or helping others do the same.
+Jacob's first began finding body awareness during rock climbing competitions. A lot later, he applied the same tenacity he used for clinging to walls to keep his partners from falling off of his hands. Jacob teaches Partner Acrobatics, dabbles in Partner Juggling, and would love to try Partner trapeze (notice a pattern?) By day, you can find Jacob programming - he loves game development and web development (like this site) - and most of the rest of the time, you can find him either balancing someone else on his body, or helping others do the same.
 </div>
 <hr class = "soften">
 
