@@ -92,7 +92,7 @@ def add_post():
 
 		# Add some metadata for the user:
 		blog_post = 'title: ' + form.title.data + '\n' + \
-					'published: ' + datetime.today().strftime('%Y-%m-%d') + '\n' + \
+					'published: ' + datetime.today().strftime('%Y-%m-%d') + '\n\n' + \
 					form.page.data
 
 		with open(page_path, 'w') as page_file:
