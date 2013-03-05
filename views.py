@@ -7,7 +7,7 @@ from datetime import date, datetime
 from unicodedata import normalize
 
 from app import app, pages
-from forms import EditPageForm, AddPostForm, ContactForm
+from forms import EditPageForm, AddPostForm, ContactForm, BookingForm
 from app.auth import LoginForm
 from flask import render_template, flash, redirect, session, url_for, request
 from flask.ext.login import login_user, login_required
@@ -54,9 +54,16 @@ def contact():
 		return redirect(url_for('contact'))
 	return render_template('contact.html', title='Contact Us', form=form)
 
-@app.route('/booking/')
+@app.route('/booking/', methods=["GET", "POST"])
 def booking():
-	return page_helper('booking')
+	form = BookingForm()
+	if form.validate_on_submit():
+		form.send()
+		flash('Thanks for contacting us! We promise to get back to you soon.', 'booking')
+		return redirect(url_for('booking'))
+	else:
+		print 'could not validate'
+	return render_template('booking.html', title='Booking', form=form)
 
 @app.route('/about/')
 def about():
@@ -92,7 +99,7 @@ def add_post():
 
 		# Add some metadata for the user:
 		blog_post = 'title: ' + form.title.data + '\n' + \
-					'published: ' + datetime.today().strftime('%Y-%m-%d') + '\n' + \
+					'published: ' + datetime.today().strftime('%Y-%m-%d') + '\n\n' + \
 					form.page.data
 
 		with open(page_path, 'w') as page_file:

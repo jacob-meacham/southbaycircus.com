@@ -30,6 +30,8 @@
     <!-- Bootstrap -->
     <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{url_for('static', filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+
+    <link href="{{url_for('static', filename='css/jquery-ui-1.10.1.custom.min.css')}}" rel="stylesheet">
     
     <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
   </head>
@@ -81,6 +83,7 @@
               {{- nav_item('Classes', 'classes', '/classes') }}
               {{- nav_item('Teachers', 'teachers', '/teachers') }}
               {{- nav_item('Blog', 'blog', '/blog') }}
+              {{- nav_item('Booking', 'booking', '/booking') }}
               {{- nav_item('Contact Us', 'contact', '/contact') }}
             </ul>
           </div>
@@ -111,6 +114,7 @@ Our indiegogo campaign is up and running to raise money for aerial equipment, ma
 
     <!-- JavaScript at the bottom for fast page loading -->
     <script src="{{url_for('static', filename='js/jquery-1.9.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery-ui-1.10.1.custom.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/application.js')}}"></script>
 
