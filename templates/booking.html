@@ -1,0 +1,129 @@
+{%- macro begin_control_group(errors_field) %}
+<div class="control-group{% if errors_field %} error{% endif %}">
+	<div class="controls">
+{%- endmacro %}
+
+{%- macro end_control_group(errors_field) %}
+		{% for error in errors_field %}
+			<span class="help-inline">{{error}}</span><br>
+		{% endfor %}
+	</div>
+</div>
+{%- endmacro %}
+  
+{%- extends "base.html" %}
+{%- block content %}
+<h1>Book Us!</h1>
+<div class="row">
+<div class="span6">
+	{%- with messages = get_flashed_messages(category_filter=['booking']) %}
+	{%- if messages %}
+	{%- for message in messages %}
+	<div class="alert alert-info fade in">
+	    <button type="button" class="close" data-dismiss="alert">&times;</button>
+	    {{ message }}
+	</div>
+	{%- endfor %}
+	{%- endif %}
+	{%- endwith %}
+	<form class="form well booking" action="" method="post" name="booking">
+		{{form.hidden_tag()}}
+		{%- if form.errors %}
+			<div class="alert alert-error fade in">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<p>We just need you to fix a few things before we can take a look.</p>
+				<ul>
+				{%- for field_name, field_errors in form.errors|dictsort if field_errors %}
+		            {%- for error in field_errors %}
+		                <li>{{ form[field_name].label(class="help-inline alert-error") }}: {{ error }}</li>
+		            {%- endfor %}
+		        {%- endfor %}
+		    	</ul>
+			</div>
+		{%- endif %}
+		<fieldset>
+			<legend>Basic Info</legend>
+			{{ begin_control_group(form.errors.name) }}
+				{{ form.name.label }}
+				{{ form.name(placeholder="Your Name") }}
+			{{ end_control_group(form.errors.name) }}
+
+			{{ begin_control_group(form.errors.email) }}
+				{{ form.email.label(class="main-label") }}
+				{{ form.email(type="email", placeholder="Eg. example@domain.com") }}
+			{{ end_control_group(form.errors.email) }}
+		
+			{{ begin_control_group(form.errors.phone) }}
+				{{ form.phone.label(class="main-label") }}
+				{{ form.phone(type="tel", placeholder="Eg. 555-555-5555") }}
+			{{ end_control_group(form.errors.phone) }}
+		</fieldset>
+
+		<fieldset>
+			<legend>Show Details</legend>
+			{{ form.time.label(class="main-label") }}
+			{{ form.time(class="datepicker") }}
+
+			{{ form.budget.label(class="main-label") }}
+			<span class="help-block sub-label">A rough estimate is all we need to get started</span>
+			{{ form.budget }}
+
+			{{ form.location.label(class="main-label") }}
+			{{ form.location }}
+
+			{{ begin_control_group(form.errors.performance_type) }}
+				{{ form.performance_type.label(class="main-label") }}
+				<span class="help-block sub-label">This will help us determine the number and types of performers that you might want.</span>
+				{%- for subfield in form.performance_type %}
+					{{subfield}}
+					{{subfield.label(class="help-inline select-label")}}
+					<br>
+				{%- endfor %}
+			{{ end_control_group(form.errors.performance_type) }}
+
+			{{ form.performance_styles.label(class="main-label") }}
+			<span class="help-block sub-label">Please select as many as you're interested in!</span>
+			{%- for subfield in form.performance_styles %}
+				{{subfield}}
+				{{subfield.label(class="help-inline select-label")}}
+				<br>
+			{%- endfor %}
+			{{form.other_style.label(class="help-inline")}}
+			{{ form.other_style }}
+
+			<label for="other">Anything else we need to know about?</label>
+			{{ form.other(class="input-xlarge span5", rows="10")}}
+		</fieldset>
+		<button type="submit" class="btn btn-primary">Send</button>
+	</form>
+</div>
+<div class="span6 booking-sidebar">
+	<div class="row">
+		<div class="span3">
+			<img src="{{ url_for('static', filename='img/firstfridayfire.jpg') }}"/>
+		</div>
+		<div class="span3 text">
+			<h3>Why SBCA?</h3>
+			<p class="muted">We're a local group of performers in the South Bay area. Not only are we helping to build a fun and rewarding community here, our performances are top-notch. Sure, you could bring the circus down from San Francisco (and we love the performers up there!), but why not use the first-class talent in your home town?
+		</div>
+	</div>
+	<div class="row">
+		<div class="span3">
+			<img src="{{ url_for('static', filename='img/h2h.jpg') }}"/>
+		</div>
+		<div class="span3 text" style="padding-top: 80px;">
+			<h3>Every Style, Every Occasion</h3>
+			<p class="muted">We're comfortable in all sorts of venues. From kid's birthday parties, to grand corporate soirees, adding a bit of circus to your event can make it come alive. Book us to stand outside your trade booth and direct traffic your way, have us help with company team-building exercises, or let us entertain an audience on stage.
+		</div>
+	</div>
+	<div class="row">
+		<div class="span3">
+			<img src="{{ url_for('static', filename='img/lotus_pose.jpg') }}"/>
+		</div>
+		<div class="span3 text" style="padding-top: 30px;">
+			<h3>A Full Circus</h3>
+			<p class="muted">South Bay Circus Arts can give you a one-of-a-kind performance. Our core performers are not only extremely talented - they also know every type of circus act under the sun. We can juggle, spin fire, crack whips, throw our partners through the air, and dangle effortlessly in the air. For some of our past performances, check out our <a href="http://www.youtube.com/user/SouthBayCircusArts">Youtube</a> page.
+		</div>
+	</div>
+</div>
+{% endblock %}

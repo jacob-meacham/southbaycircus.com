@@ -371,3 +371,43 @@ border-top: 3px solid transparent;
   margin-top: 15px;
   text-align: center;
 }
+
+/* Booking */
+legend {
+  margin-bottom: 10px;
+}
+
+.input-prepend input {
+  margin-bottom: 10px;
+}
+
+.help-block.sub-label {
+  padding-left: 5px;
+  margin-top: -5px;
+  margin-bottom: 2px;
+  opacity: 0.8;
+}
+
+.booking .main-label {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+
+.help-inline.select-label {
+  position: relative;
+  top: 5px;
+}
+
+.booking-sidebar img {
+  padding: 5px;
+  border: 1px solid rgba(155, 155, 155, 0.5);
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+.booking-sidebar .text {
+  padding-top: 6px;
+}
