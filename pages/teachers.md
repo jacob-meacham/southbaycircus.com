@@ -39,8 +39,10 @@ Jessica started her circus training doing floor routines in a USA leotard in her
 
 <div class="row bio">
 <img src="/static/img/teachers/julie.jpg"/>
-<h3>Julie Harness</h3>
-Bio coming soon. 
+<h3>Julie Spiralwing</h3>
+
+Julie Spiralwing's love of fire is innate. She played with burning objects around the bonfire as a child, but first tried organized fire dancing on Mission Beach in Queensland, Australia in 2003. Later, she became serious in her study of poi while living in beautiful Laguna Beach. There, she explored other tools. After trying fire hoop, she discovered that hoop dancing was awfully fun in its own right, even when not on fire. In 2007, Julie started a performance troupe along with two other firespinners. They successfully infiltrated a group of unsuspecting drummers to establish a monthly fire spin jam in Laguna Beach, alongside the already popular La Vida Laguna drumming group. Through the expansion of the fire community in Laguna, Julie developed her love of teaching fire spinning and the flow arts as well as an appreciation for the need of fire safety instruction in the community. Julie continues to perform as Elemental Fire Arts and now teaches a regular hoop class on Tuesday nights with South Bay Circus Arts, as well as occasional classes on fire spinning and other flow tools.
+
 </div>
 <hr class = "soften">
 

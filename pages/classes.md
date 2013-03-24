@@ -16,7 +16,6 @@ Classes start the week of Tuesday, March 12.
 	<option value="60 min drop-in">60 min drop-in $20.00 USD</option>
 	<option value="75-90 min drop-in">75-90 min drop-in $25.00 USD</option>
 	<option value="120 min drop-in">120 min drop-in $30.00 USD</option>
-	<option value="Cyr Wheel series">Cyr Wheel series $130.00 USD</option>
 </select> </td></tr>
 <tr><td><input type="hidden" name="on1" value="Classes you plan to take">Classes you plan to take</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
 </table>
@@ -30,12 +29,7 @@ Classes start the week of Tuesday, March 12.
 ####Tuesday at Starting Arts
 
 * 7:15-8:15 Roue Cyr (Cyr Wheel)  
-*Note: This is a special 4-week series and is limited to 4 participants. Learn the basic fundamentals of spinning in a small class, including wheel manipulation, the basic waltz, proper cartwheeling and an introduction to coin drops. Cyr wheels can be provided for students between the heights 5'4'' to 5'9''. Cost for all four classes is $130.*<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="Z7EKE9WBAMLNN">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+*Note: This is a special 4-week series and is limited to 4 participants. Learn the basic fundamentals of spinning in a small class, including wheel manipulation, the basic waltz, proper cartwheeling and an introduction to coin drops. Cyr wheels can be provided for students between the heights 5'4'' to 5'9''. Cost for all four classes is $130. The current session is full. Stay tuned for the next series!*
 * 7:30-9:30 Intermediate Partner Acrobatics
 * 8:15-9:15 Hooping 
 
