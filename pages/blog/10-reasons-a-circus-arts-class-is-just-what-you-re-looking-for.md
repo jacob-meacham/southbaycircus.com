@@ -1,5 +1,6 @@
 title: 10 reasons a circus arts class is just what you're looking for!
 author: Jessica
+image: blog/friends.jpg
 published: 2013-03-24
 
 Looking for an excuse to try out a circus class? We've got 10 of them for you right here!
@@ -48,6 +49,7 @@ Looking for an excuse to try out a circus class? We've got 10 of them for you ri
 <br>
 <br>
 <img src="/static/img/blog/liz.jpg" class="blog-image" style="display: block; margin-left: auto; margin-right: auto">
+*Photo credit of Jordan Huotari Designs*
 
 **7. You're looking for something meditative.** You've tried yoga and love it, the balance, control, the concentration. Now try taking your flow to the next level (literally!) and do it all on a slackline! 
 
