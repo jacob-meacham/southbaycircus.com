@@ -31,14 +31,14 @@ Classes start the week of Tuesday, March 12.
 * 7:15-8:15 Roue Cyr (Cyr Wheel)  
 *Note: This is a special 4-week series and is limited to 4 participants. Learn the basic fundamentals of spinning in a small class, including wheel manipulation, the basic waltz, proper cartwheeling and an introduction to coin drops. Cyr wheels can be provided for students between the heights 5'4'' to 5'9''. Cost for all four classes is $130. The current session is full. Stay tuned for the next series!*
 * 7:30-9:30 Intermediate Partner Acrobatics
-* 8:15-9:15 Hooping 
+* 8:15-9:15 All Levels Hooping 
 
 ####Thursday at Starting Arts
-* 7:30-8:30 Beginning Juggling
-* 8:30-9:30 Club and Poi Spinning
+* 7:30-8:30 All Levels Juggling, Beginners Welcome
+* 8:30-9:30 All Levels Club and Poi Spinning
 
 ####Sunday at Vega's Integrated Tumbling
-* 12:45-2 Beginning Partner Acrobatics 
+* 12:45-2 All Levels Partner Acrobatics 
 * 1-2 Beginning Aerial Arts (optional warm-up with Acrobatics class 12:45-1 for $5)
 
 Don't see the class you're looking for? [Send us a message](/contact/) and let us know! 
