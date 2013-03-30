@@ -1,9 +1,9 @@
 title: What goes up must come down
-published: 2013-03-23
 image: blog/acropy.png
 author: Jessica
+published: 2013-03-23
 
-<img src="/static/img/blog/twohigh2.jpeg" class="blog-image" style="float: left; max-width: 250px"> Several of us had the pleasure of spending last weekend at a partner acrobatics workshop with dutch acrobat, Niko Dowes. 
+<img src="/static/img/blog/twohigh2.jpeg" class="blog-image" style="float: left; max-width: 250px"> Several of us had the pleasure of spending last weekend at a partner acrobatics workshop with dutch acrobat, Niko Douwes. 
 
 
 Niko started his workshop by saying  "In tumbling you're doing a lot of landing. In partner acrobatics, we want to bring our partners to the ground." We're always working at getting these crazy poses, but then it's just as important from a performance and training standpoint, to know how to get out of them, to bring our partners safely back to land. 
