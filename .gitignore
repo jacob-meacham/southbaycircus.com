@@ -1,3 +1,4 @@
 *.pyc
 fileeditor
 config.py
+*.log
