@@ -1,5 +1,5 @@
 title: 10 reasons a circus arts class is just what you're looking for!
-image: blog/friends.jpg
+image: blog/sooaerial.jpeg
 author: Jessica
 published: 2013-03-24
 

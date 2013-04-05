@@ -1,6 +1,6 @@
 title: Classes
 
-Don't see the class you're looking for? [Send us a message](/contact/) and let us know! 
+Don't see the class you're looking for? [Send us a message](/contact/) and let us know! Classes are multi-level and beginner friendly unless otherwise noted. Before trying Intermediate Partner Acrobatics, we suggest you be comfortable with the material in [this video](/http://www.youtube.com/watch?v=OBFIVFuwevU/).) 
 
 ##Pricing
 
@@ -19,7 +19,7 @@ Don't see the class you're looking for? [Send us a message](/contact/) and let u
         <option value="Juggling">Juggling $20.00 USD</option>
         <option value="Club and Poi Spinning">Club and Poi Spinning $20.00 USD</option>
         <option value="Aerial Fabric">Aerial Fabric $20.00 USD</option>
-        <option value="All Level Partner Acrobatics">All Level Partner Acrobatics $20.00 USD</option>
+        <option value="Partner Acrobatics">Partner Acrobatics $20.00 USD</option>
         <option value="Intermediate Partner Acrobatics">Intermediate Partner Acrobatics $25.00 USD</option>
 </select> </td></tr>
 </table>
