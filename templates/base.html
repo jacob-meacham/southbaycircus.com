@@ -34,6 +34,8 @@
     <link href="{{url_for('static', filename='css/jquery-ui-1.10.1.custom.min.css')}}" rel="stylesheet">
     
     <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+    {%- block css %}
+    {%- endblock %}
   </head>
   <body>
     <div id="wrap"> <!-- Wrap element for sticky footer. No indent. -->
@@ -116,6 +118,9 @@
     <script src="{{url_for('static', filename='js/jquery-ui-1.10.1.custom.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/application.js')}}"></script>
+
+    {%- block scripts %}
+    {%- endblock %}
 
     <!-- Asynchronous Google Analytics snippet. -->
     <script type="text/javascript">

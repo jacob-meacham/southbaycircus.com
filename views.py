@@ -9,7 +9,7 @@ from unicodedata import normalize
 from app import app, pages
 from forms import EditPageForm, AddPostForm, ContactForm, BookingForm
 from app.auth import LoginForm
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, jsonify
 from flask.ext.login import login_user, login_required
 
 def slugify(text, delim=u'-'):
@@ -153,6 +153,18 @@ def edit_page(path):
         full_page += page.body
         form.page.data = full_page
     return render_template('admin_edit_page.html', form=form, page=page)
+
+@app.route('/admin/media/library')
+@login_required
+def media_library_json():
+    valid_files = []
+    for root, _, names in os.walk('static/img/blog'):
+            files = ['img/blog/' + n  # Use + instead of os.path.join because we always want to use / when we send it to jinja.
+                     for n in names if n[0] != '.']
+            valid_files.extend(files)
+    return jsonify({
+        'media': valid_files
+    })
 
 @app.route('/admin/media')
 @login_required
