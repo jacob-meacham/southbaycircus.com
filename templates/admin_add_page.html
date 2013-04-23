@@ -32,37 +32,7 @@
 		</div>
 	</form>
 </div>
-
-<!-- Modal -->
-<div class="modal media-modal hide fade" tabindex="-1" role="dialog" aria-labelledby="mediaModal" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="mediaModal">Insert Media</h3>
-    <div class="btn-group" data-toggle="buttons-radio">
-	    <button class="btn btn-link btn-upload-files">Upload Files</button>
-	    <button class="btn btn-link btn-show-library">Media Library</button>
-	</div>
-  </div>
-  <div class="modal-body">
-  	<div class="media-library">
-	  	<div class="row-fluid">
-	  		<div class="span9">
-			    <ul class="thumbnails">
-			    </ul>
-			</div>
-			<div class="span3 select-media-pane">
-				
-			</div>
-		</div>
-	</div>
-	<div class="upload-files">
-		Test test test test test test test test test test
-	</div>
-  </div>
-  <div class="modal-footer">
-    <button class="btn btn-insert-media" data-dismiss="modal" aria-hidden="true">Insert</button>
-  </div>
-</div>
+{%- include "media_library.html" %}
 {%- endblock %}
 
 {%- block scripts %}

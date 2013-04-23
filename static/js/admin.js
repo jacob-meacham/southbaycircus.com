@@ -22,8 +22,13 @@ $(function() {
   });
 });
 
+$(function() {
+  $('.btn-insert-media').click(function(e) {
+    insertMedia();
+  });
+});
+
 function selectMedia(media) {
-  console.log(media);
   var img = $('<img></img>').attr('src', media.attr('src'));
   var parent = $('.select-media-pane');
   parent.empty();
@@ -48,5 +53,14 @@ function getMediaLibrary(parentDiv) {
 }
 
 function insertMedia() {
-
+  var val = $('#page').val(),
+      strPos = $('#page')[0].selectionStart;
+      front  = val.substring(0,strPos),
+      back   = val.substring(strPos,val.length);
+  var elem = $('<img></img>')
+      .addClass('blog-image')
+      .attr('src', $('.select-media-pane').children('img').attr('src'))
+      .attr('style', 'display: block; margin-left: auto; margin-right: auto;');
+  console.log(elem);
+  $('#page').val(front + $('<div></div>').append(elem).html() + back);
 }
