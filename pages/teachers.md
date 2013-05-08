@@ -8,13 +8,6 @@ Christina "Nova" GoOutski was introduced to prop manipulation and flow arts by a
 <hr class = "soften">
 
 <div class="row bio">
-<img src="/static/img/teachers/corbin.jpg"/>
-<h3>Corbin Dunn</h3>
-Corbin Dunn is former world champion unicyclist that picked up the cyr wheel when he discovered he could be the hub and spokes of the wheel. When not spinning around in circles, he can be found fabricating whimsical creations in his garage, traveling by unicycle in far off lands, or programming computers to do cool things.
-</div>
-<hr class = "soften">
-
-<div class="row bio">
 <img src="/static/img/teachers/cosmo.jpg"/>
 <h3>Cosmo</h3>
 After forty years in the entertainment industry, Cosmo has reached a high enough level of skill to only need his first name to be recognized. He has performed on screen, on stage, and as a street performer. His list of skills include juggling, unicycling, mime, balloon animals, and whip cracking (to name a few). He has lent his skills to the video game industry where he can be seen (virtually) fighting beasts and as a dancing bear. He has shared many of his skills with others ranging from the beginner to the seasoned professional. He enjoys teaching as much as he does performing.
@@ -50,6 +43,13 @@ Julie Spiralwing's love of fire is innate. She played with burning objects aroun
 <img src="/static/img/teachers/miriam.jpg"/>
 <h3>Miriam Robinson Gould</h3>
 Miriam fell in love with aerial dance by way of theater when a role required her to learn aerial rope tricks. Determined to learn more after the show ended, she studied aerial silks with <a href="http://bluelapislight.org/">Blue Lapis Light</a>, Austin's site-specific aerial dance troupe. She has since taken flight for the Jezebelles go-go dance troupe, CircX Vortex, BootieSF, and <a href="http://fire.firepixie.com/">Fire Pixie Entertainment</a>, performing aerial hammock, aerial net, and solo and duet aerial silks. She is excited to help a new generation of students learn to fly.
+</div>
+<hr class = "soften">
+
+<div class="row bio">
+<img src="/static/img/teachers/candace.jpg"/>
+<h3>Sadira</h3>
+Sadira (aka Lady Liquid) has studied various forms of movement and dance, including ballet, jazz, and bellydance, and has a Bachelors degree in Theatrical Arts. She is also a registered Yoga Teacher and <a href="http://myanirvana.com/classes-offered">Thai Yoga (massage) practitioner</a>. This type of body work provides Sadira with great intuitions into body mechanics that she then makes accessible to others through bodywork and conditioning workshops as well as regular yoga classes. She is currently studying Tribal Fusion Bellydance under the world renowned artists Jill Parker and Zoe Jakes, and Sadira can be seen dancing regularly at Dosa N Biryani and throughout the Bay Area. 
 </div>
 <hr class = "soften">
 
