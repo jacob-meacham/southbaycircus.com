@@ -1,26 +1,33 @@
 title: Classes
 
-Don't see the class you're looking for? [Send us a message](/contact/) and let us know! Classes are multi-level and beginner friendly unless otherwise noted. Before trying Intermediate Partner Acrobatics, we suggest you be comfortable with the material in [this video](/http://www.youtube.com/watch?v=OBFIVFuwevU/).) 
+##Current Classes
+
+We are currently offering the following classes:
+
+Aerial silks (tissu), club/poi spinning, circus conditioning, hula hoop, partner acrobatics
+
+We also have a circus practice night that includes guidance in juggling skills. See the calendar below for times, locations, and class descriptions.
+
+Don't see the class you're looking for? [Send us a message](/contact/) and let us know! Classes are multi-level and beginner friendly unless otherwise noted. 
 
 ##Pricing
 
-60-75 minute drop-in $20  
-2 hour drop-in $25  
+60 minute drop-in $20  
+90 minute drop-in $25  
 5-class punch card $90  
 10-class punch card $175
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="RMXGQ2XAMTD94">
+<input type="hidden" name="hosted_button_id" value="Y2RBQUH6GEV8C">
 <table>
 <tr><td><input type="hidden" name="on0" value="Class Options">Class Options</td></tr><tr><td><select name="os0">
 	<option value="10-class card">10-class card $175.00 USD</option>
-        <option value="5-class card">5-class card $90.00 USD</option>
+	<option value="5-class card">5-class card $90.00 USD</option>
 	<option value="Hoop Dance">Hoop Dance $20.00 USD</option>
-        <option value="Juggling">Juggling $20.00 USD</option>
-        <option value="Club and Poi Spinning">Club and Poi Spinning $20.00 USD</option>
-        <option value="Aerial Fabric">Aerial Fabric $20.00 USD</option>
-        <option value="Partner Acrobatics">Partner Acrobatics $20.00 USD</option>
-        <option value="Intermediate Partner Acrobatics">Intermediate Partner Acrobatics $25.00 USD</option>
+	<option value="Club and Poi Spinning">Club and Poi Spinning $20.00 USD</option>
+	<option value="Aerial Fabric">Aerial Fabric $20.00 USD</option>
+	<option value="Beginner Partner Acrobatics">Beginner Partner Acrobatics $20.00 USD</option>
+	<option value="Intermediate Partner Acrobatics">Intermediate Partner Acrobatics $25.00 USD</option>
 </select> </td></tr>
 </table>
 <input type="hidden" name="currency_code" value="USD">
