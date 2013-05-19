@@ -2,6 +2,7 @@
 
 {%- block css %}
 <link href="{{url_for('static', filename='css/admin.css')}}" rel="stylesheet">
+<link href="{{url_for('static', filename='css/fileupload-ui.css')}}" rel="stylesheet">
 {%- endblock %}
 
 {%- block content %}
@@ -37,7 +38,7 @@
 
 {%- block scripts %}
 <script src="{{url_for('static', filename='js/admin.js')}}"></script>
-<script src="{{url_for('static', filename='js/file-upload/vendor/jquery.ui.widget.js')}}"></script>
-<script src="{{url_for('static', filename='js/file-upload/jquery.iframe-transport.js')}}"></script>
 <script src="{{url_for('static', filename='js/file-upload/jquery.fileupload.js')}}"></script>
+<script src="{{url_for('static', filename='js/file-upload/jquery.fileupload-fp.js')}}"></script>
+<script src="{{url_for('static', filename='js/file-upload/jquery.fileupload-ui.js')}}"></script>
 {%- endblock %}

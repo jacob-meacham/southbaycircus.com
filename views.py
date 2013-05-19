@@ -166,6 +166,11 @@ def media_library_json():
         'media': valid_files
     })
 
+@app.route('/admin/media/upload')
+@login_required
+def upload_image():
+    pass
+
 @app.route('/admin/media')
 @login_required
 def media_library():
