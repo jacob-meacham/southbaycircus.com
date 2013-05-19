@@ -38,6 +38,17 @@ body .media-modal {
   margin-bottom: 5px;
 }
 
+.thumbnail-selected {
+  border: 1px solid #08c;
+}
+
+.select-media-pane > img {
+  max-height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body .media-modal .btn-link.active, body .media-modal .btn-link.active:hover,  body .media-modal .btn-link.active:active {
   color: #777;
   text-decoration:none; 

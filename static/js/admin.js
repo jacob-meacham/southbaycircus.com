@@ -1,48 +1,88 @@
-// Media Library
-$(function() {
-    $('.btn-add-media').click(function(e) {
-      getMediaLibrary($('.thumbnails'));
-    });
-    $('.upload-files').hide();
-  });
-
-$(function() {
+var mediaPanel = null;
+function MediaPanel() {
   $('.btn-upload-files').click(function(e) {
-    $('.media-library').hide();
-    $('.upload-files').show();
+    mediaPanel.showUpload();
   });
-});
 
-$(function() {
   var button = $('.btn-show-library');
   button.button('toggle');
   button.click(function(e) {
-    $('.media-library').show();
-    $('.upload-files').hide();
+    mediaPanel.showLibrary();
   });
-});
 
-$(function() {
   $('.btn-insert-media').click(function(e) {
     insertMedia();
   });
-});
 
-function selectMedia(media) {
-  var img = $('<img></img>').attr('src', media.attr('src'));
-  var parent = $('.select-media-pane');
-  parent.empty();
-  parent.append(img);
+  this.reset();
 }
 
+MediaPanel.prototype.reset = function() {
+  $('.btn-insert-media').addClass('disabled');
+
+  this.showLibrary();
+  this.resetSelection();
+};
+
+MediaPanel.prototype.resetSelection = function() {
+  if (this.selection) {
+    this.selection.parent().removeClass('thumbnail-selected');
+  }
+
+  this.selection = null;
+  var parent = $('.select-media-pane');
+  parent.empty();
+
+  $('.btn-insert-media').addClass('disabled');
+};
+
+MediaPanel.prototype.showLibrary = function() {
+  $('.media-library').show();
+  $('.upload-files').hide();
+};
+
+MediaPanel.prototype.showUpload = function() {
+  $('.media-library').hide();
+  $('.upload-files').show();
+};
+
+MediaPanel.prototype.selectMedia = function(selection) {
+  if (this.selection) {
+    this.selection.parent().removeClass('thumbnail-selected');
+  }
+
+  if (selection.is(this.selection)) {
+    // Alread selected, so unselect.
+    this.resetSelection();
+  } else {
+    this.selection = selection;
+    this.selection.parent().addClass('thumbnail-selected');
+    var img = $('<img></img>').attr('src', selection.attr('src'));
+    var parent = $('.select-media-pane');
+    parent.empty();
+    parent.append(img);
+
+    $('.btn-insert-media').removeClass('disabled');
+  }
+};
+
+// Media Library
+$(function() {
+    mediaPanel = new MediaPanel();
+    $('.btn-add-media').click(function(e) {
+      getMediaLibrary($('.thumbnails'));
+    });
+  });
+
 function getMediaLibrary(parentDiv) {
+  mediaPanel.reset();
   $.get('/admin/media/library').done(function(json) {
     var mediaList = json['media'];
     $.each(mediaList, function(key, value) {
       var img = $('<img></img>').attr('src', '/static/' + value);
       var link = $('<a></a>')
         .addClass('thumbnail')
-        .click(function(e) { selectMedia($(this).children('img')); })
+        .click(function(e) { mediaPanel.selectMedia($(this).children('img')); })
         .append(img);
       var elem = $('<li></li>')
         .addClass('span3')
