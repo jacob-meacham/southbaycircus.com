@@ -103,7 +103,6 @@ function insertMedia() {
       .addClass('blog-image')
       .attr('src', $('.select-media-pane').children('img').attr('src'))
       .attr('style', 'display: block; margin-left: auto; margin-right: auto;');
-  console.log(elem);
   $('#page').val(front + $('<div></div>').append(elem).html() + back);
 }
 
