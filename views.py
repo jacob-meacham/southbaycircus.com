@@ -160,7 +160,7 @@ def edit_page(path):
 def media_library_json():
     app.logger.info('Getting media')
     valid_files = []
-    for root, _, names in os.walk('static/img/blog'):
+    for root, _, names in os.walk(os.path.join(app.root_path, 'static', 'img', 'blog')):
         app.logger.info('Root:' + root)
         app.logger.info('Name: ' + str(names))
         files = [('img/blog/' + n, os.path.getmtime(os.path.join(root, n)))
