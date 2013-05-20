@@ -7,6 +7,7 @@ SECRET_KEY = '--SECRET KEY--'
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
+UPLOAD_FOLDER = 'static/img/blog/'
 
 ADMINS = [User("admin", "password", 1)]
 
