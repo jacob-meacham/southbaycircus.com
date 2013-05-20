@@ -1,5 +1,7 @@
 var mediaPanel = null;
-function MediaPanel() {
+function MediaPanel(thumbnailDiv) {
+  this.thumbnailDiv = thumbnailDiv;
+
   $('.btn-upload-files').click(function(e) {
     mediaPanel.showUpload();
   });
@@ -19,7 +21,7 @@ function MediaPanel() {
 
 MediaPanel.prototype.reset = function() {
   $('.btn-insert-media').addClass('disabled');
-
+  $('.thumbnails').empty();
   this.showLibrary();
   this.resetSelection();
 };
@@ -68,13 +70,13 @@ MediaPanel.prototype.selectMedia = function(selection) {
 
 // Media Library
 $(function() {
-    mediaPanel = new MediaPanel();
+    mediaPanel = new MediaPanel($('.thumbnails'));
     $('.btn-add-media').click(function(e) {
-      getMediaLibrary($('.thumbnails'));
+      getMediaLibrary();
     });
   });
 
-function getMediaLibrary(parentDiv) {
+function getMediaLibrary() {
   mediaPanel.reset();
   $.get('/admin/media/library').done(function(json) {
     var mediaList = json['media'];
@@ -87,7 +89,7 @@ function getMediaLibrary(parentDiv) {
       var elem = $('<li></li>')
         .addClass('span3')
         .append(link);
-      parentDiv.append(elem);
+      mediaPanel.thumbnailDiv.append(elem);
     });
   });
 }
@@ -107,23 +109,13 @@ function insertMedia() {
 
 // Uploading:
 $(function () {
-    'use strict';
-
-    // Initialize the jQuery File Upload widget:
-    $('#fileupload').fileupload({
-        url: 'admin/media/upload'
-    });
-
-    // Load existing files:
-    $('#fileupload').addClass('fileupload-processing');
-    $.ajax({
-        url: $('#fileupload').fileupload('option', 'url'),
-        dataType: 'json',
-        context: $('#fileupload')[0]
-    }).always(function (result) {
-        $(this).removeClass('fileupload-processing');
-    }).done(function (result) {
-        $(this).fileupload('option', 'done')
-            .call(this, null, {result: result});
+  $('#fileupload').fileupload({
+        url: '/admin/media/upload',
+        add: function (e, data) {
+            data.submit();
+        },
+        done: function (e, data) {
+          getMediaLibrary();
+        }
     });
 });

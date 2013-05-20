@@ -11,6 +11,7 @@ from forms import EditPageForm, AddPostForm, ContactForm, BookingForm
 from app.auth import LoginForm
 from flask import render_template, flash, redirect, url_for, request, jsonify
 from flask.ext.login import login_user, login_required
+from werkzeug import secure_filename
 
 def slugify(text, delim=u'-'):
     _punct_re = re.compile(r'[\t !"#$%&\'()*\-/<=>?@\[\\\]^_`{|},.]+')
@@ -159,17 +160,24 @@ def edit_page(path):
 def media_library_json():
     valid_files = []
     for root, _, names in os.walk('static/img/blog'):
-            files = ['img/blog/' + n  # Use + instead of os.path.join because we always want to use / when we send it to jinja.
-                     for n in names if n[0] != '.']
-            valid_files.extend(files)
+        files = [('img/blog/' + n, os.path.getmtime(os.path.join(root, n)))
+                 for n in names if n[0] != '.']
+        valid_files.extend(files)
+    valid_files.sort(key=lambda x: x[1], reverse=True)
     return jsonify({
-        'media': valid_files
+        'media': [f[0] for f in valid_files]
     })
 
-@app.route('/admin/media/upload')
+@app.route('/admin/media/upload', methods=['POST'])
 @login_required
 def upload_image():
-    pass
+    data_file = request.files['file']
+    filename = secure_filename(data_file.filename)
+    data_file.save(os.path.join(app.root_path, app.config['UPLOAD_FOLDER'], filename))
+    return jsonify(name=filename,
+                   size=0,
+                   url=url_for('media_library'),
+                   thumbnail=url_for('media_library'))
 
 @app.route('/admin/media')
 @login_required
