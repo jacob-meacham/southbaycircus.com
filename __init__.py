@@ -29,8 +29,12 @@ import logging
 from logging.handlers import RotatingFileHandler
 file_handler = RotatingFileHandler(os.path.join(basedir, 'logs/sbca.log'), 'a', 1 * 1024 * 1024, 10)
 file_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
-app.logger.setLevel(logging.INFO)
-file_handler.setLevel(logging.INFO)
+if (app.debug):
+    app.logger.setLevel(logging.INFO)
+    file_handler.setLevel(logging.INFO)
+else:
+    app.logger.setLevel(logging.WARNING)
+    file_handler.setLevel(logging.WARNING)
 app.logger.addHandler(file_handler)
 app.logger.info('sbca startup')
 

@@ -158,8 +158,11 @@ def edit_page(path):
 @app.route('/admin/media/library')
 @login_required
 def media_library_json():
+    app.logger.info('Getting media')
     valid_files = []
     for root, _, names in os.walk('static/img/blog'):
+        app.logger.info('Root:' + root)
+        app.logger.info('Name: ' + str(names))
         files = [('img/blog/' + n, os.path.getmtime(os.path.join(root, n)))
                  for n in names if n[0] != '.']
         valid_files.extend(files)
