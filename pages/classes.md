@@ -6,7 +6,7 @@ We are currently offering the following classes:
 
 Aerial silks (tissu), club/poi spinning, circus conditioning, hula hoop, partner acrobatics
 
-We also have a circus practice night that includes guidance in juggling skills. See the calendar below for times, locations, and class descriptions.
+We have discontinued our open practice night and ongoing juggling classes, but we will have a multi-level juggling class on Thursday, 5/30. See the calendar below for times, locations, and class descriptions.
 
 Don't see the class you're looking for? [Send us a message](/contact/) and let us know! Classes are multi-level and beginner friendly unless otherwise noted. 
 
