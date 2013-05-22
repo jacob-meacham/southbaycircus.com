@@ -1,6 +1,13 @@
 {%- extends "base.html" %}
+
+{%- block css %}
+<link href="{{url_for('static', filename='css/admin.css')}}" rel="stylesheet">
+<link href="{{url_for('static', filename='css/fileupload-ui.css')}}" rel="stylesheet">
+{%- endblock %}
+
 {%- block content %}
 <div class="well">
+	<a href=".media-modal" role="button" class="btn btn-add-media" data-toggle="modal">Add Media</a>
 	<form class="form" action="" method="post" name="login">
 		{{form.hidden_tag()}}
 		<div class="control-group{% if form.errors.title %} error{% endif %}">
@@ -26,4 +33,12 @@
 		</div>
 	</form>
 </div>
+{%- include "media_library.html" %}
+{%- endblock %}
+
+{%- block scripts %}
+<script src="{{url_for('static', filename='js/admin.js')}}"></script>
+<script src="{{url_for('static', filename='js/file-upload/jquery.fileupload.js')}}"></script>
+<script src="{{url_for('static', filename='js/file-upload/jquery.fileupload-fp.js')}}"></script>
+<script src="{{url_for('static', filename='js/file-upload/jquery.fileupload-ui.js')}}"></script>
 {%- endblock %}

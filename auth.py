@@ -1,5 +1,4 @@
 from app import app, login_manager
-from app.user import User
 from flask.ext.wtf import Form, TextField, PasswordField, validators
 
 class LoginForm(Form):

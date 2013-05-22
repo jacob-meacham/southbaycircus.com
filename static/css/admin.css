@@ -1,0 +1,59 @@
+/* Fix for thumbnails in fluid row. */
+.row-fluid ul.thumbnails .span2:nth-child(6n + 7) {
+  margin-left: 0;
+}
+
+.row-fluid ul.thumbnails .span4:nth-child(3n + 4) {
+  margin-left: 0;
+}
+
+.row-fluid ul.thumbnails .span3:nth-child(4n + 5) {
+  margin-left: 0;
+}
+
+.row-fluid ul.thumbnails .span12 + li {
+  margin-left: 0;
+}
+
+/* Media Library */
+body .media-modal {
+  width: 95%;
+  left: 2.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumbnail > img {
+	display: block;
+	top: 0;
+	left: 0;
+	margin: 0 auto;
+
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 100px;
+}
+
+.btn-add-media {
+  margin-bottom: 5px;
+}
+
+.thumbnail-selected {
+  border: 1px solid #08c;
+}
+
+.select-media-pane > img {
+  max-height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body .media-modal .btn-link.active, body .media-modal .btn-link.active:hover,  body .media-modal .btn-link.active:active {
+  color: #777;
+  text-decoration:none; 
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
