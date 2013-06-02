@@ -14,7 +14,7 @@ from flask.ext.login import login_user, login_required
 from werkzeug import secure_filename
 
 def slugify(text, delim=u'-'):
-    _punct_re = re.compile(r'[\t !"#$%&\'()*\-/<=>?@\[\\\]^_`{|},.]+')
+    _punct_re = re.compile(r'[\t !"#$%&\'()*\-/<=>?@\[\\\]^_`{|},.:]+')
     result = []
     for word in _punct_re.split(text.lower()):
         word = normalize('NFKD', word).encode('ascii', 'ignore')
@@ -123,7 +123,7 @@ def add_post():
         page_path = os.path.join(app.root_path, app.config['FLATPAGES_ROOT'], 'blog', slug) + app.config['FLATPAGES_EXTENSION']
 
         # Add some metadata for the user:
-        blog_post = ('title: ' + form.title.data + '\n' +
+        blog_post = ('title: ' + form.title.data.replace(':', '') + '\n' +
                      'published: ' + datetime.today().strftime('%Y-%m-%d') + '\n\n' +
                      form.page.data)
 
