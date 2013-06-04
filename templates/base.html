@@ -20,7 +20,7 @@
     <meta property="og:description" content="{{ogdescription|striptags|truncate(250)}}">
     {%- endif %}
     {%- if ogimage %}
-    <meta property="og:image" content="{{url_for('static', filename='img/' + post.image)}}">
+    <meta property="og:image" content="{{url_for('static', filename='img/' + post.image, _external=True)}}">
     {%- endif %}
 
     <!-- Icons -->
