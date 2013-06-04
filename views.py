@@ -75,7 +75,12 @@ def post_detail(path):
     recent_posts = [p for p in pages if 'blog' in p.path]
     recent_posts = sorted(recent_posts, reverse=True, key=lambda p: p.meta.get('published', date.today()))
     recent_posts = recent_posts[:5]
-    return render_template('blog_post.html', title=post['title'], post=post, recent_posts=recent_posts)
+    if 'description' in post.meta:
+        description = post['description']
+    else:
+        description = post
+
+    return render_template('blog_post.html', title=post['title'], ogimage=post['image'], ogdescription=description, post=post, recent_posts=recent_posts)
 
 interest_images = [
     'img/bg/acro1.png',
