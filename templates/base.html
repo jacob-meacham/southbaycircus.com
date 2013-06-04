@@ -15,12 +15,12 @@
     <title>South Bay Circus Arts</title>
     {%- endif %}
 
-    <!-- Facebook meta -->
+    <!-- Opengraph properties -->
     {%- if ogdescription %}
-    <meta name="og:description" content="{{ogdescription|striptags|truncate(250)}}">
+    <meta property="og:description" content="{{ogdescription|striptags|truncate(250)}}">
     {%- endif %}
     {%- if ogimage %}
-    <meta name="og:image" content="{{url_for('static', filename='img/' + post.image)}}">
+    <meta property="og:image" content="{{url_for('static', filename='img/' + post.image)}}">
     {%- endif %}
 
     <!-- Icons -->
