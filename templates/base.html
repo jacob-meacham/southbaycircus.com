@@ -15,6 +15,14 @@
     <title>South Bay Circus Arts</title>
     {%- endif %}
 
+    <!-- Facebook meta -->
+    {%- if ogdescription %}
+    <meta name="og:description" content="{{ogdescription|striptags|truncate(250)}}">
+    {%- endif %}
+    {%- if ogimage %}
+    <meta name="og:image" content="{{url_for('static', filename='img/' + post.image)}}">
+    {%- endif %}
+
     <!-- Icons -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/apple-touch-icon-precomposed.png') }}">
