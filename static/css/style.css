@@ -411,3 +411,9 @@ legend {
 .booking-sidebar .text {
   padding-top: 6px;
 }
+
+.schedule-block {
+  padding: 10px;
+  border: 1px solid rgba(155, 155, 155, 0.5);
+  background-color: rgba(155, 155, 155, 0.5); 
+}
