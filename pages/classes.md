@@ -1,14 +1,5 @@
 title: Classes
-
-##Current Classes
-
-We are currently offering the following classes:
-
-Aerial silks (tissu), club/poi spinning, circus conditioning, hula hoop, partner acrobatics
-
-We have discontinued our open practice night and ongoing juggling classes, but we will have a multi-level juggling class on Thursday, 5/30. See the calendar below for times, locations, and class descriptions.
-
-Don't see the class you're looking for? [Send us a message](/contact/) and let us know! Classes are multi-level and beginner friendly unless otherwise noted. 
+template: classes.html
 
 ##Pricing
 
@@ -23,11 +14,6 @@ Don't see the class you're looking for? [Send us a message](/contact/) and let u
 <tr><td><input type="hidden" name="on0" value="Class Options">Class Options</td></tr><tr><td><select name="os0">
 	<option value="10-class card">10-class card $175.00 USD</option>
 	<option value="5-class card">5-class card $90.00 USD</option>
-	<option value="Hoop Dance">Hoop Dance $20.00 USD</option>
-	<option value="Club and Poi Spinning">Club and Poi Spinning $20.00 USD</option>
-	<option value="Aerial Fabric">Aerial Fabric $20.00 USD</option>
-	<option value="Beginner Partner Acrobatics">Beginner Partner Acrobatics $20.00 USD</option>
-	<option value="Intermediate Partner Acrobatics">Intermediate Partner Acrobatics $25.00 USD</option>
 </select> </td></tr>
 </table>
 <input type="hidden" name="currency_code" value="USD">
@@ -35,12 +21,10 @@ Don't see the class you're looking for? [Send us a message](/contact/) and let u
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-##Current Class Schedule  
-<iframe src="https://www.google.com/calendar/embed?src=hpfc74ml4ibi9ju02hf30csqo4%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
-
 ##Class Locations
 Starting Arts 3340 Montgomery Dr. Santa Clara, CA 95054  
 Vega's Integrated Tumbling 1111 Felipe Ave #101 San Jose CA, 95122
 
 <hr class="soften">
+
+Don't see the class you're looking for? [Send us a message](/contact/) and let us know! Classes are multi-level and beginner friendly unless otherwise noted. 

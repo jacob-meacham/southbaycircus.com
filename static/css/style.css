@@ -209,10 +209,10 @@ border-top: 3px solid transparent;
 
 .navbar .nav > li > a:hover {
   border-top-color: #fcb426;
-  -webkit-transition:border-top-color 0.3s ease;
-  -moz-transition:border-top-color 0.3s ease;
-  -o-transition:border-top-color 0.3s ease;
-  transition:border-top-color 0.3s ease;
+  -webkit-transition:border-top-color 0.15s ease;
+  -moz-transition:border-top-color 0.15s ease;
+  -o-transition:border-top-color 0.15s ease;
+  transition:border-top-color 0.15s ease;
 }
 
 .navbar .nav > li.active > a:hover {
