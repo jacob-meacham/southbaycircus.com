@@ -1,6 +1,6 @@
 {%- extends "base.html" %}
 {%- block content %}
-<div class="row">
+<section class="row">
 	<div class="span4">
 		<img class="block-image" src="{{ url_for('static', filename='img/firstfridayfire.jpg') }}"/>
 	</div>
@@ -12,9 +12,9 @@
 		<h2>Want to book us?</h2>
 		<p>We <strong>love</strong> performing, almost as much as we love sharing the Circus arts. Head over to our <a href="{{ url_for('booking') }}">booking</a> page to see what we can do for you!</p>
 	</div>
-</div>
+</section>
 <hr class = "soften">
-<div class="row">
+<section class="row">
 	<div class="span5">
 		<div class="separator"></div>
 		{%- with messages = get_flashed_messages(category_filter=['contact']) %}
@@ -82,5 +82,5 @@
 	<strong>Starting Arts</strong> 3340 Montgomery Dr.
 Santa Clara, CA 95054 | <strong>Vega's Integrated Tumbling</strong> 1111 Felipe Ave #101
 San Jose CA , CA 95122
-</div>
+</section>
 {% endblock %}

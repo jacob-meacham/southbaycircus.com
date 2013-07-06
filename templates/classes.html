@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="row">
-	<div class="span8">
+	<article class="span8">
 		<div class="schedule-block">
 			<script src='http://m.goteamup.com/teamup.js' type='text/javascript'></script>
 			<script type='text/javascript'>teamup.calendar({provider_id:51643,width:"750px",height:"900px",view:"list",rows:"2"});</script>
 		</div>
-	</div>
-	<div class="span4">
+	</article>
+	<article class="span4">
 		{{ page }}
-	</div>
+	</article>
 </div>
 {% endblock %}
