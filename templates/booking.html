@@ -15,7 +15,7 @@
 {%- block content %}
 <h1>Book Us!</h1>
 <div class="row">
-<div class="span6">
+	<div class="span6">
 	{%- with messages = get_flashed_messages(category_filter=['booking']) %}
 	{%- if messages %}
 	{%- for message in messages %}
@@ -98,7 +98,7 @@
 	</form>
 </div>
 <div class="span6 booking-sidebar">
-	<div class="row">
+	<article class="row">
 		<div class="span3">
 			<img src="{{ url_for('static', filename='img/firstfridayfire.jpg') }}"/>
 		</div>
@@ -106,8 +106,8 @@
 			<h3>Why SBCA?</h3>
 			<p class="muted">We're a local group of performers in the South Bay area. Not only are we helping to build a fun and rewarding community here, our performances are top-notch. Sure, you could bring the circus down from San Francisco (and we love the performers up there!), but why not use the first-class talent in your home town?
 		</div>
-	</div>
-	<div class="row">
+	</article>
+	<article class="row">
 		<div class="span3">
 			<img src="{{ url_for('static', filename='img/h2h.jpg') }}"/>
 		</div>
@@ -115,8 +115,8 @@
 			<h3>Every Style, Every Occasion</h3>
 			<p class="muted">We're comfortable in all sorts of venues. From kid's birthday parties, to grand corporate soirees, adding a bit of circus to your event can make it come alive. Book us to stand outside your trade booth and direct traffic your way, have us help with company team-building exercises, or let us entertain an audience on stage.
 		</div>
-	</div>
-	<div class="row">
+	</article>
+	<article class="row">
 		<div class="span3">
 			<img src="{{ url_for('static', filename='img/lotus_pose.jpg') }}"/>
 		</div>
@@ -124,6 +124,6 @@
 			<h3>A Full Circus</h3>
 			<p class="muted">South Bay Circus Arts can give you a one-of-a-kind performance. Our core performers are not only extremely talented - they also know every type of circus act under the sun. We can juggle, spin fire, crack whips, throw our partners through the air, and dangle effortlessly in the air. For some of our past performances, check out our <a href="http://www.youtube.com/user/SouthBayCircusArts">Youtube</a> page.
 		</div>
-	</div>
+	</article>
 </div>
 {% endblock %}
