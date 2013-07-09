@@ -30,7 +30,7 @@ def page_helper(path):
 @app.route('/')
 def index():
     page = pages.get('index')
-    return render_template('index.html', page=page)
+    return render_template('index.html', page=page, no_seperator=True)
 
 @app.route('/classes/')
 def classes():

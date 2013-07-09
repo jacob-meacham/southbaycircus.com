@@ -116,12 +116,18 @@ hr.soften {
   border: 0;
 }
 
-.separator {
-  margin: 40px 0 40px;
+hr.soften-small {
+  height: 1px;
+  margin: 15px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0; 
 }
 
-.header {
-  margin-bottom: 10px;
+.separator {
+  margin: 40px 0 40px;
 }
 
 .center {

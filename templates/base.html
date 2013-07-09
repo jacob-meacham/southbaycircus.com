@@ -101,7 +101,9 @@
       </div>
     </nav>
     <section class="container content">
-      <div class="separator"></div>
+      {%- if no_separator %}
+        <div class="separator"></div>
+      {%- endif %}
       {%- block content %}
       {%- endblock %}
     </section>
