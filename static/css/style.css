@@ -130,6 +130,10 @@ hr.soften-small {
   margin: 40px 0 40px;
 }
 
+.header-separator {
+  margin-bottom: 50px;
+}
+
 .center {
   margin-left:auto;
   margin-right:auto;
@@ -137,7 +141,7 @@ hr.soften-small {
 
 /* Header */
 .header .pusher {
-  height: 39px;
+  height: 43px;
 }
 
 .logo {
@@ -151,7 +155,7 @@ hr.soften-small {
   top: 70px;
   bottom: 0;
   background: #c0232f;
-  height: 55px;
+  height: 60px;
   z-index: -1;
   opacity: 0.9;
 }
@@ -280,17 +284,60 @@ border-top: 3px solid transparent;
   width: 200px;
 }
 
-.thumbnail {
+.main-feature {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 0;
+  height: 400px;
+}
+
+.main-feature figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: auto;
+}
+
+.main-feature .container {
+  position: relative;
+}
+
+.main-feature .container article {
+  position: static;
+  padding: 0 20px;
+  margin-top: 110px;
+}
+
+.main-feature article {
+  padding: 40px 60px 0 350px;
+}
+
+.main-feature h2 {
+  margin: 0;
+  text-shadow: #000 -1px -1px 1px;
+  color: #fff;
+  padding: 0;
+}
+
+.main-feature p {
+  color: #fff;
+}
+
+.sub-features .thumbnail {
   padding: 0px;
   background-color: white;
 }
 
-.thumbnail img {
+.sub-features .thumbnail img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.thumbnail .caption {
+.sub-features .thumbnail .caption {
   padding: 9px;
   line-height: 18px;
   color: #555555;

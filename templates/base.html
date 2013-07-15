@@ -100,9 +100,11 @@
         </div>
       </div>
     </nav>
+    {%- block precontent %}
+    {%- endblock %}
     <section class="container content">
-      {%- if no_separator %}
-        <div class="separator"></div>
+      {%- if not no_separator %}
+        <div class="header-separator"></div>
       {%- endif %}
       {%- block content %}
       {%- endblock %}
