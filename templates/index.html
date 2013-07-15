@@ -1,12 +1,23 @@
 {%- extends "base.html" %}
+{%- block precontent %}
+
+{%- endblock %}
 {%- block content %}
 <div class="row">
 	<div class="span12">
-		<section class="main-interest">
-			<img src="{{ url_for('static', filename='img/slide2.jpg') }}" alt="">
-		</section>
+		<section class="main-feature">
+	<figure>
+		<img src="{{ url_for('static', filename='img/slide-02.jpg') }}" alt="">
+	</figure>
+	<div class="container">
+		<article>
+			<h2>This is a test header</h2>
+			<p>Here is some test content that might go right <a href="#">here!</a></p>
+		</article>
+	</div>
+</section>
 		<hr class="soften-small">
-		<section class="interest-thumbs">
+		<section class="sub-features">
 			<ul class="thumbnails">
 				<li class="span4">
 			    <article class="thumbnail">
