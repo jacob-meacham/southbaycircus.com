@@ -5,6 +5,7 @@ import re
 
 from datetime import date, datetime
 from unicodedata import normalize
+from random import choice
 
 from app import app, pages
 from forms import EditPageForm, AddPostForm, ContactForm, BookingForm
@@ -30,7 +31,10 @@ def page_helper(path):
 @app.route('/')
 def index():
     page = pages.get('index')
-    return render_template('index.html', page=page, no_separator=True)
+    main_features = [p for p in pages if 'main-feature' in p.path]
+    sub_features = [p for p in pages if 'sub-feature' in p.path]
+    sub_features = sorted(sub_features)
+    return render_template('index.html', page=page, main_feature=choice(main_features), sub_features=sub_features, no_separator=True)
 
 @app.route('/classes/')
 def classes():
