@@ -1,4 +1,4 @@
 image: jessie_hang.jpg
-title: Ongoing Classes
+title: No Kid's Classes - Yet
 
-We have ongoing classes in poi, juggling, hooping, partner acrobatics, and silks. Take a look at our [classes](/classes/) page for class locations and times. Don't see a class that you'd like to take? Let us know on our [contact](/contact/) page.
+You can be the first to know when we'll be offering classes for children. Sign up for our [mailing list](http://eepurl.com/x66Nj), or drop us a line to let us know what types of classes you'd like to see!

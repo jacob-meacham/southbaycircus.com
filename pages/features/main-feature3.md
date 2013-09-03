@@ -1,4 +1,4 @@
 image: banner3.jpg
 
-<h2>Main Feature 3</h2>
-<p>Here is main feature 3!</p>
+<h2>Living Social</h2>
+Still holding onto your Living Social Voucher? Don't worry, we'll honor it through the fall.

@@ -1,4 +1,4 @@
 image: banner5.jpg
 
-<h2>Main Feature 4</h2>
-<p>Here is main feature 4!</p>
+<h2>Private Classes</h2>
+Limited private group lessons are available - [contact](/contact/) us for more info!
