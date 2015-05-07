@@ -3,7 +3,7 @@ image: blog/sooaerial.jpeg
 author: Jessica
 published: 2013-03-24
 
-Looking for an excuse to try out a circus class? We've got ten for you right here! Whether your interests are physical, artistic, social, crafty, or downright fun, we think we'll have something to fit the bill. 
+Looking for an excuse to try a circus class? We've got ten for you right here! Whether your interests are physical, artistic, social, crafty, or downright fun, we think we'll have something to fit the bill. 
 <br>
 <br>
 <img src="/static/img/blog/sooaerial.jpeg" class="blog-image" style="display: block; margin-left: auto; margin-right: auto">
@@ -58,21 +58,21 @@ Looking for an excuse to try out a circus class? We've got ten for you right her
 <br>
 <img src="/static/img/blog/sadira.jpg" class="blog-image" style="display: block; margin-left: auto; margin-right: auto">
 
-**8. You like to light things on fire.**  A high school boyfriend of my sister's used to spin fire poi and we're all still talking about it. Fire spinning is the best way to burn an impression on someone's brain. * No, this one we DO NOT mean literally! 
+**8. You like to light things on fire.**  A high school boyfriend of my sister's used to spin fire poi and we're all still talking about it. Fire spinning is the best way to burn an impression on someone's brain. (This one we DO NOT mean literally!) 
 
 <br>
 <br>
 <br>
 <iframe width="520" height="390" src="http://www.youtube.com/embed/OvtA-ufmo_E" frameborder="0" style="display: block; margin-left: auto; margin-right: auto"> </iframe>
 
-**9. You want something to do with your partner.** Partner acrobatics is a great place to start! Get fitter together, find new ways to non-verbally communicate. Tell your partner they need to place their hands differently. Take it personally when they point out your unstraight arms. Get defensive, get snippy, storm off to the other room and search youtube for videos that make your case. Who, me? Have experience with this? What makes you say that?  
+**9. You want something to do with your partner.** Partner acrobatics is a great place to start! Get fitter together, find new ways to non-verbally communicate. Tell your partner he needs to place his hands differently. Take it personally when he points out your unstraight arms. Get defensive, get snippy, storm off to the other room and search youtube for videos that make your case. Who, me? Have experience with this? What makes you say that?  
 
 <br>
 <br>
 <br>
 <img src="/static/img/blog/soocosmo.jpg" class="blog-image" style="display: block; margin-left: auto; margin-right: auto">
 
-**10. You're on the lookout for a new party trick.** Where there are things, there can be juggling. Learn the three ball juggle so you can juggle your friends' apples without dropping them. Thrill and terrify the neighborhood kids by juggling machetes past their heads! (We like to warm up with clubs.)   
+**10. You're on the lookout for a new party trick.** Where there are things, there can be juggling. Learn the three-ball juggle and hit the fruit bowl for makeshift juggling materials. Then, thrill and terrify the neighborhood kids when you juggle machetes past their heads! (We like to warm up with clubs.)   
 
 
 If any of these reasons hooks you, head on over to our [class listings](/classes/), and sign up for a class!
