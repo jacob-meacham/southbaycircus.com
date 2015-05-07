@@ -3,19 +3,19 @@ image: blog/sooaerial.jpeg
 author: Jessica
 published: 2013-03-24
 
-Looking for an excuse to try out a circus class? We've got 10 of them for you right here! Whether your interests are physical, artistic, social, crafty, or downright fun, we think we'll have something to fit the bill. 
+Looking for an excuse to try out a circus class? We've got ten for you right here! Whether your interests are physical, artistic, social, crafty, or downright fun, we think we'll have something to fit the bill. 
 <br>
 <br>
 <img src="/static/img/blog/sooaerial.jpeg" class="blog-image" style="display: block; margin-left: auto; margin-right: auto">
 
-**1. You're looking for a way to get in shape.** Need incentive to do pullups? How about an awesome trick on the silks that requires shoulder strength? Looking for your core muscles? Nothing to train that like trying to keep yourself balanced atop your partner's feet or hands? Back strength? Leg control? Mind control? We can't help with that last one, but for the others, we've got you covered. 
+**1. You're looking for a way to get in shape.** Need incentive to do pullups? A fancy aerial trick might be just what you need. On a quest for your core? Nothing trains your abdominals like balancing on a partner's feet? Back strength? Leg control? Mind control? We can't help with that last one, but for the others, we've got you covered. 
 
 <br>
 <br>
 <br>
 <img src="/static/img/blog/moni.jpeg" class="blog-image" style="display: block; margin-left: auto; margin-right: auto">
 
-**2. You've always dreamed of being on the stage.** Why just aspire to having your name up in bright lights, when you could be up there yourself, flying through the air. 
+**2. You've always dreamed of being on stage.** Why just aspire to your name in bright lights, when you could be up there yourself, flying through the air. 
 
 <br>
 <br>
@@ -29,7 +29,7 @@ Looking for an excuse to try out a circus class? We've got 10 of them for you ri
 <br>
 <img src="/static/img/blog/hoops.jpg" class="blog-image" style="display: block; margin-left: auto; margin-right: auto"> 
 
-**4. You want to get your heart pumping.** Love dance workouts? Try hooping. An hour of cardio will fly by when all the mind space you have is focused on keeping your hoop on your arms and body.
+**4. You want to get your heart pumping.** Love dance workouts? Try hooping. An hour of cardio will fly by when all your mind power goes to keeping your hoop on your body.
 
 <br>
 <br>
@@ -43,7 +43,7 @@ Looking for an excuse to try out a circus class? We've got 10 of them for you ri
 <br>
 <img src="/static/img/blog/hoopsballs.JPG" class="blog-image" style="display: block; margin-left: auto; margin-right: auto">
 
-**6. You want an outlet for your craftiness** Hoops and juggling balls are a great place to start. Handstand canes. A bull whip, perchance? A cyr wheel? A unicycle? Who says you can't make your toys and play with them, too? Fortunately, nobody said that.
+**6. You want an outlet for your craftiness** Hoops and juggling balls are a great place to start. Then try handstand canes. Then, a bull whip, perchance? A cyr wheel? A unicycle? Who says you can't make your toys and play with them, too? Fortunately, nobody said that.
 
 <br>
 <br>
@@ -58,7 +58,7 @@ Looking for an excuse to try out a circus class? We've got 10 of them for you ri
 <br>
 <img src="/static/img/blog/sadira.jpg" class="blog-image" style="display: block; margin-left: auto; margin-right: auto">
 
-**8. You like to light things on fire.**  A high school boyfriend of my sister's used to spin fire poi and we're all still talking about it. Fire spinning is the best way to burn an impression on someone's brain. *No, this one we DO NOT mean literally! 
+**8. You like to light things on fire.**  A high school boyfriend of my sister's used to spin fire poi and we're all still talking about it. Fire spinning is the best way to burn an impression on someone's brain. * No, this one we DO NOT mean literally! 
 
 <br>
 <br>
@@ -72,7 +72,7 @@ Looking for an excuse to try out a circus class? We've got 10 of them for you ri
 <br>
 <img src="/static/img/blog/soocosmo.jpg" class="blog-image" style="display: block; margin-left: auto; margin-right: auto">
 
-**10. You're on the lookout for a new party trick.** Where there are things, there can be juggling. Learn the three ball juggle so you can juggle your friends' apples without dropping them. Entertain the neighborhood kids by juggling machetes on either side of them! (We like to warm up with clubs.)   
+**10. You're on the lookout for a new party trick.** Where there are things, there can be juggling. Learn the three ball juggle so you can juggle your friends' apples without dropping them. Thrill and terrify the neighborhood kids by juggling machetes past their heads! (We like to warm up with clubs.)   
 
 
 If any of these reasons hooks you, head on over to our [class listings](/classes/), and sign up for a class!
